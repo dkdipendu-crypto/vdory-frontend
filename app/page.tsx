@@ -2,33 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-const steps = [
-{
-number: "01",
-title: "Upload Clips",
-description: "Upload your raw video footage.",
-},
-{
-number: "02",
-title: "Choose Category",
-description: "Select content type and objective.",
-},
-{
-number: "03",
-title: "Style & Variation",
-description: "Pick the look, tone and format.",
-},
-{
-number: "04",
-title: "Duration Settings",
-description: "Set duration and slow-motion options.",
-},
-{
-number: "05",
-title: "Generate Video",
-description: "AI creates publish-ready content.",
-},
-];
 
 return (
 <main className="min-h-screen bg-gradient-to-b from-white via-zinc-50 to-white text-zinc-900">
@@ -92,39 +65,8 @@ Login
 </div>
 </section>
 
-{/* How VDORY Works */}
-<section className="max-w-7xl mx-auto px-6 py-12">
-<h2 className="text-4xl font-bold text-center mb-16">
-How VDORY Works
-</h2>
-
-<div className="relative">
-
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-{steps.map((step) => (
-<div
-key={step.number}
-className="bg-white border border-zinc-200 rounded-3xl p-8 shadow-sm hover:shadow-lg transition"
->
-<div className="text-5xl font-light text-zinc-300 mb-6">
-{step.number}
-</div>
-
-<h3 className="text-xl font-semibold mb-3">
-{step.title}
-</h3>
-
-<p className="text-zinc-600">
-{step.description}
-</p>
-</div>
-))}
-</div>
-</div>
-</section>
-
 {/* Footer */}
-<footer className="border-t border-zinc-200 mt-20">
+<footer className="border-t border-zinc-200 mt-8">
 <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-8">
 <div>
 <h3 className="font-bold text-xl">VDORY.AI</h3>
