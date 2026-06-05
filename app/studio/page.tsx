@@ -13,8 +13,14 @@ const [category, setCategory] = useState("");
 const [style, setStyle] = useState("");
 const [duration, setDuration] = useState("");
 const [slowMotion, setSlowMotion] = useState(false);
+const [showReplaceWarning, setShowReplaceWarning] = useState(false);
 
 const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+if (clips.length > 0) {
+setShowReplaceWarning(true);
+return;
+}
+
 const files = Array.from(e.target.files || []);
 
 if (files.length > 10) {
@@ -22,11 +28,13 @@ alert("Maximum 10 clips allowed.");
 return;
 }
 
+setShowReplaceWarning(false);
 setClips(files);
 };
 
 const clearClips = () => {
 setClips([]);
+setShowReplaceWarning(false);
 if (fileInputRef.current) {
 fileInputRef.current.value = "";
 }
@@ -97,7 +105,15 @@ Review your selections before creating the video.
 
 <div className="flex justify-center mt-5">
 <button
-onClick={() => fileInputRef.current?.click()}
+onClick={() => {
+if (clips.length > 0) {
+setShowReplaceWarning(true);
+return;
+}
+
+fileInputRef.current?.click();
+}}
+
 className="bg-black text-white px-6 py-3 rounded-xl font-medium hover:opacity-90"
 >
 Upload Clips
@@ -168,7 +184,12 @@ className="flex items-center justify-between rounded-xl border border-zinc-200 b
 ))}
 </div>
 
+{showReplaceWarning && (
 <div className="mt-4">
+<p className="text-sm text-red-600 mb-3">
+Please clear all clips before uploading new clips.
+</p>
+
 <button
 onClick={clearClips}
 className="text-sm bg-red-600 text-white px-4 py-2 rounded-lg"
@@ -176,6 +197,7 @@ className="text-sm bg-red-600 text-white px-4 py-2 rounded-lg"
 Clear All Clips
 </button>
 </div>
+)}
 </>
 )}
 </div>

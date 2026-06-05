@@ -1,5 +1,7 @@
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 export default function DashboardPage() {
+const router = useRouter();
 return (
 <main className="min-h-screen bg-zinc-50">
 {/* Sticky Header */}
@@ -53,10 +55,6 @@ Ready to create AI-powered content.
 </p>
 </div>
 
-<button className="rounded-2xl bg-black px-8 py-4 text-white font-medium hover:opacity-90 transition">
-+ New Project
-</button>
-
 </div>
 </div>
 </section>
@@ -85,8 +83,10 @@ Start New Project
 <p className="mt-3 text-zinc-600">
 Upload clips, choose your style, and create social-ready content in minutes.
 </p>
-
-<button className="mt-6 rounded-2xl bg-black px-8 py-4 text-white font-medium hover:opacity-90 transition">
+<button
+onClick={() => router.push("/studio")}
+className="mt-6 rounded-2xl bg-black px-8 py-4 text-white font-medium hover:opacity-90 transition"
+>
 + New Project
 </button>
 
