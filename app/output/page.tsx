@@ -55,7 +55,7 @@ className="absolute inset-0 rounded-full border-4 border-blue-500 border-t-trans
 Generating Your Video
 </h2>
 
-<p className="mt-3 text-center text-white text-lg font-medium max-w-md drop-shadow-lg">
+<p className="mt-3 text-center text-white text-lg font-medium max-w-xs px-6 drop-shadow-lg">
 This usually takes up to 90 seconds.
 Please keep this page open.
 </p>

@@ -6,7 +6,7 @@ export default function Home() {
 return (
 <main className="min-h-screen bg-gradient-to-b from-white via-zinc-50 to-white text-zinc-900">
 {/* Header */}
-<header className="flex items-center justify-between px-6 py-6 md:px-12">
+<header className="sticky top-0 z-50 bg-white flex items-center justify-between px-6 py-4 md:px-12">
 <div>
 <Image
 src="/logo-vdory.png"
@@ -15,7 +15,7 @@ width={121}
 height={20}
 priority
 />
-<p className="text-xs text-zinc-500 mt-1">
+<p className="text-[10px] text-zinc-500 mt-0.5 text-center">
 Shaping Digital Reality
 </p>
 </div>
@@ -29,7 +29,7 @@ Login
 </header>
 
 {/* Hero */}
-<section className="mx-auto max-w-6xl px-6 pt-20 pb-24 text-center">
+<section className="mx-auto max-w-6xl px-6 pt-10 pb-16 text-center">
 <p className="tracking-[0.3em] text-xs uppercase text-zinc-500 mb-8">
 AI-Powered Content Production Platform
 </p>
@@ -66,14 +66,8 @@ Login
 </section>
 
 {/* Footer */}
-<footer className="border-t border-zinc-200 mt-8">
-<div className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-8">
-<div>
-<h3 className="font-bold text-xl">VDORY.AI</h3>
-<p className="text-zinc-500 text-sm">
-Shaping Digital Reality
-</p>
-</div>
+<footer className="border-t border-zinc-200 mt-2">
+<div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-8">
 
 <div className="flex gap-8 text-zinc-600 text-sm">
 <a href="#">About</a>
