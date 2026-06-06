@@ -34,7 +34,7 @@ return (
 className="min-h-screen bg-zinc-50"
 >
 {isGenerating && (
-<div className="fixed inset-0 z-[100] bg-black/20 flex items-center justify-center">
+<div className="fixed inset-0 z-[100] bg-zinc-900 flex items-center justify-center">
 <div className="flex flex-col items-center">
 
 <div className="relative h-36 w-36">
@@ -52,19 +52,18 @@ className="absolute inset-0 rounded-full border-4 border-blue-500 border-t-trans
 </div>
 
 <h2 className="mt-8 text-3xl font-bold text-white">
-Generating Your Video
+Creating Your Video
 </h2>
 
-<p className="mt-3 text-center text-white text-lg font-medium max-w-xs px-6 drop-shadow-lg">
-This usually takes up to 90 seconds.
-Please keep this page open.
+<p className="mt-3 text-center text-zinc-300 text-base max-w-sm px-6">
+Rendering your content. Please keep this page open.
 </p>
 
 </div>
 </div>
 )}
 <div
-className={isGenerating ? "blur-sm" : ""}
+className={isGenerating ? "opacity-0 pointer-events-none" : ""}
 >
 
 {/* Header */}
@@ -102,6 +101,11 @@ Review, download and publish your content.
 {/* Video Preview */}
 <div>
 <div className="bg-black rounded-3xl overflow-hidden aspect-[9/16] w-full max-w-sm mx-auto">
+<video
+src="/renders/output.mp4"
+controls
+className="w-full h-full object-cover"
+/>
 </div>
 </div>
 

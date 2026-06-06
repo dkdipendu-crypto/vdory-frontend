@@ -14,6 +14,21 @@ const [style, setStyle] = useState("");
 const [duration, setDuration] = useState("");
 const [slowMotion, setSlowMotion] = useState(false);
 const [showReplaceWarning, setShowReplaceWarning] = useState(false);
+const handleGenerate = async () => {
+if (clips.length === 0) return;
+
+console.log("Uploading:", clips[0].name);
+
+const formData = new FormData();
+formData.append("video", clips[0]);
+
+fetch("/api/render", {
+method: "POST",
+body: formData,
+});
+
+router.push("/output");
+};
 
 const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
 if (clips.length > 0) {
@@ -318,6 +333,7 @@ className="text-sm font-medium text-zinc-700 hover:text-black"
 
 <button
 disabled={!canGenerate}
+onClick={handleGenerate}
 className={`px-6 py-3 rounded-xl text-white transition whitespace-nowrap ${
 canGenerate
 ? "bg-black hover:opacity-90"
