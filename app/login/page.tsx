@@ -32,7 +32,7 @@ Turn raw footage into publish-ready social content in minutes.
 </div>
 
 {/* Right Side */}
-<div className="flex items-center justify-center px-6 py-12">
+<div className="flex items-start justify-center px-6 py-16 lg:py-24">
 <div className="w-full max-w-lg mx-auto">
 
 <div className="text-center mb-8">

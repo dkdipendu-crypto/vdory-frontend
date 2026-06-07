@@ -61,7 +61,7 @@ height={20}
 <div className="max-w-7xl mx-auto px-6 py-8">
 <div className="max-w-7xl mx-auto px-6 py-8 flex justify-between items-center">
 <div>
-<h2 className="text-3xl font-bold">
+<h2 className="text-3xl font-bold text-black">
 Dashboard Analytics
 </h2>
 
@@ -70,8 +70,8 @@ Business overview and platform insights
 </p>
 </div>
 
-<div className="flex items-center gap-2 text-base font-medium text-green-600">
-<span className="h-2.5 w-2.5 rounded-full bg-green-500"></span>
+<div className="flex items-center gap-2 whitespace-nowrap text-base font-base text-green-600">
+<span className="h-2.5 w-2.5 rounded-full bg-green-500 flex-shrink-0"></span>
 <span>System Healthy</span>
 </div>
 </div>
@@ -79,32 +79,32 @@ Business overview and platform insights
 
 <div className="bg-white rounded-2xl p-5 border border-zinc-200">
 <p className="text-sm text-zinc-500">Website Views</p>
-<h3 className="text-3xl font-bold mt-2">12,847</h3>
+<h3 className="text-3xl font-bold text-zinc-700 mt-2">12,847</h3>
 </div>
 
 <div className="bg-white rounded-2xl p-5 border border-zinc-200">
 <p className="text-sm text-zinc-500">Accounts</p>
-<h3 className="text-3xl font-bold mt-2">1,245</h3>
+<h3 className="text-3xl font-bold text-zinc-700 mt-2">1,245</h3>
 </div>
 
 <div className="bg-white rounded-2xl p-5 border border-zinc-200">
 <p className="text-sm text-zinc-500">Active Users</p>
-<h3 className="text-3xl font-bold mt-2">894</h3>
+<h3 className="text-3xl font-bold text-zinc-700 mt-2">894</h3>
 </div>
 
 <div className="bg-white rounded-2xl p-5 border border-zinc-200">
 <p className="text-sm text-zinc-500">Paid Users</p>
-<h3 className="text-3xl font-bold mt-2">127</h3>
+<h3 className="text-3xl font-bold text-zinc-700 mt-2">127</h3>
 </div>
 
 <div className="bg-white rounded-2xl p-5 border border-zinc-200">
 <p className="text-sm text-zinc-500">Videos Rendered</p>
-<h3 className="text-3xl font-bold mt-2">9,431</h3>
+<h3 className="text-3xl font-bold text-zinc-700 mt-2">9,431</h3>
 </div>
 
 <div className="bg-white rounded-2xl p-5 border border-zinc-200">
 <p className="text-sm text-zinc-500">Monthly Cost</p>
-<h3 className="text-3xl font-bold mt-2">$241</h3>
+<h3 className="text-3xl font-bold text-zinc-700 mt-2">$241</h3>
 </div>
 
 </div>
@@ -112,7 +112,7 @@ Business overview and platform insights
 
 <div className="bg-white rounded-2xl border border-zinc-200 p-6">
 <div className="flex justify-between items-center">
-<h3 className="font-semibold text-lg">
+<h3 className="font-semibold text-lg text-zinc-600">
 Account Creation Trend
 </h3>
 
@@ -148,7 +148,7 @@ strokeWidth={3}
 
 <div className="bg-white rounded-2xl border border-zinc-200 p-6">
 <div className="flex justify-between items-center">
-<h3 className="font-semibold text-lg">
+<h3 className="font-semibold text-lg text-zinc-600">
 Active vs Inactive Users
 </h3>
 
@@ -182,7 +182,7 @@ label
 
 <div className="bg-white rounded-2xl border border-zinc-200 p-6">
 <div className="flex justify-between items-center">
-<h3 className="font-semibold text-lg">
+<h3 className="font-semibold text-lg text-zinc-600">
 Paid User Growth
 </h3>
 
@@ -218,7 +218,7 @@ strokeWidth={3}
 
 <div className="bg-white rounded-2xl border border-zinc-200 p-6">
 <div className="flex justify-between items-center">
-<h3 className="font-semibold text-lg">
+<h3 className="font-semibold text-lg text-zinc-600">
 Monthly Video Rendering
 </h3>
 
@@ -252,7 +252,7 @@ barSize={40}
 </div>
 </div>
 <div className="bg-white rounded-2xl border border-zinc-200 p-6 mt-0 lg:col-span-2">
-<h3 className="font-semibold text-lg mb-4">
+<h3 className="font-semibold text-lg text-zinc-600 mb-4">
 AI Business Insights
 </h3>
 
