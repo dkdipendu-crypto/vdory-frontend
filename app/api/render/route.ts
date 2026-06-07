@@ -4,30 +4,6 @@ import fs from "fs";
 import path from "path";
 ffmpeg.setFfmpegPath("ffmpeg");
 
-export async function GET() {
-return new Promise((resolve) => {
-ffmpeg.getAvailableFormats((err, formats) => {
-if (err) {
-resolve(
-NextResponse.json({
-success: false,
-error: err.message,
-})
-);
-return;
-}
-
-resolve(
-NextResponse.json({
-success: true,
-formatCount: Object.keys(formats).length,
-message: "FFmpeg is working",
-})
-);
-});
-});
-}
-
 export async function POST(request: Request) {
 const formData = await request.formData();
 
