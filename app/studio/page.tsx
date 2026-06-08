@@ -20,14 +20,23 @@ if (clips.length === 0) return;
 console.log("Uploading:", clips[0].name);
 
 const formData = new FormData();
-formData.append("video", clips[0]);
 
-fetch("/api/render", {
+clips.forEach((clip) => {
+formData.append("videos", clip);
+});
+
+const response = await fetch("/api/render", {
 method: "POST",
 body: formData,
 });
 
+const data = await response.json();
+
+console.log(data);
+
+if (data.success) {
 router.push("/output");
+}
 };
 
 const handleUpload = (e: React.ChangeEvent<HTMLInputElement>) => {

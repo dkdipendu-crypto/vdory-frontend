@@ -7,16 +7,14 @@ ffmpeg.setFfmpegPath("ffmpeg");
 export async function POST(request: Request) {
 const formData = await request.formData();
 
-const video = formData.get("video") as File;
+const videos = formData.getAll("videos") as File[];
 
-if (!video) {
+if (videos.length === 0) {
 return NextResponse.json({
 success: false,
-error: "No video received",
+error: "No videos received",
 });
 }
-const bytes = await video.arrayBuffer();
-const buffer = Buffer.from(bytes);
 
 const renderDir = path.join(process.cwd(), "public", "renders");
 
@@ -24,22 +22,47 @@ if (!fs.existsSync(renderDir)) {
 fs.mkdirSync(renderDir, { recursive: true });
 }
 
-const inputPath = path.join(renderDir, "input.mov");
+const inputPaths: string[] = [];
 
-fs.writeFileSync(inputPath, buffer);
+for (let i = 0; i < videos.length; i++) {
+const bytes = await videos[i].arrayBuffer();
+const buffer = Buffer.from(bytes);
 
-console.log("VIDEO SAVED:");
-console.log(inputPath);
+const filePath = path.join(renderDir, `input-${i}.mov`);
+
+fs.writeFileSync(filePath, buffer);
+
+inputPaths.push(filePath);
 
 console.log("VIDEO RECEIVED:");
-console.log(video.name);
-console.log(video.size);
+console.log(videos[i].name);
+}
+const concatFile = path.join(renderDir, "concat.txt");
+
+fs.writeFileSync(
+concatFile,
+inputPaths
+.map((file) => `file '${file.replace(/\\/g, "/")}'`)
+.join("\n")
+);
 const outputPath = path.join(renderDir, "output.mp4");
 
+const mergedPath = path.join(renderDir, "merged.mp4");
+
 await new Promise((resolve, reject) => {
-ffmpeg(inputPath)
+ffmpeg()
+.input(concatFile)
+.inputOptions(["-f concat", "-safe 0"])
+.outputOptions(["-c copy"])
+.save(mergedPath)
+.on("end", resolve)
+.on("error", reject);
+});
+
+await new Promise((resolve, reject) => {
+ffmpeg(mergedPath)
 .setStartTime(0)
-.setDuration(3)
+.setDuration(5)
 .output(outputPath)
 .on("end", () => {
 console.log("RENDER COMPLETE:");
@@ -52,10 +75,9 @@ reject(err);
 })
 .run();
 });
+
 return NextResponse.json({
 success: true,
-fileName: video.name,
-fileSize: video.size,
-message: "Video received successfully",
+message: "Videos received successfully",
 });
 }
