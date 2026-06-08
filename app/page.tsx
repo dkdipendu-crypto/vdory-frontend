@@ -15,9 +15,7 @@ width={121}
 height={20}
 priority
 />
-<p className="text-[10px] text-zinc-500 mt-0.5 text-center">
-Shaping Digital Reality
-</p>
+
 </div>
 
 <Link
@@ -78,7 +76,13 @@ Login
 </div>
 
 <div className="pb-8 text-center text-sm text-zinc-500">
+<p className="mb-1">
+Shaping Digital Reality
+</p>
+
+<p>
 © 2026 Vdory. All rights reserved.
+</p>
 </div>
 </footer>
 </main>
