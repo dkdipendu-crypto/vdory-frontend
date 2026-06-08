@@ -1,0 +1,2 @@
+file 'C:/Users/dkdip/OneDrive/Desktop/vdory-frontend/public/renders/input-0.mov'
+file 'C:/Users/dkdip/OneDrive/Desktop/vdory-frontend/public/renders/input-1.mov'

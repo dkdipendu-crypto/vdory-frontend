@@ -1,9 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { BellDot } from "lucide-react";
 export default function DashboardPage() {
 const router = useRouter();
+const [profileOpen, setProfileOpen] = useState(false);
+const [notificationOpen, setNotificationOpen] = useState(false);
 return (
 <main className="min-h-screen bg-zinc-50">
 {/* Sticky Header */}
@@ -16,18 +20,112 @@ width={110}
 height={20}
 />
 
-<div className="flex items-center gap-4">
+<div className="flex items-center gap-6">
 
-<button className="text-xl">
-🔔
+<div className="relative">
+
+<button
+onClick={() => setNotificationOpen(!notificationOpen)}
+className="relative flex items-center justify-center h-9 w-9"
+>
+<BellDot size={20} className="text-zinc-700"/>
+
+<span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-red-500 -translate-x-1 translate-y-1"></span>
+
 </button>
 
-<div className="w-9 h-9 rounded-full bg-black text-white flex items-center justify-center">
+</div>
+
+<button
+onClick={() => setProfileOpen(!profileOpen)}
+className="w-9 h-9 rounded-full bg-black text-white flex items-center justify-center"
+>
 D
+</button>
+
+</div>
+</div>
+{notificationOpen && (
+<div className="absolute right-24 top-16 w-80 rounded-2xl border border-zinc-200 bg-white p-4 shadow-lg">
+
+<h3 className="font-semibold">
+Notifications
+</h3>
+
+<div className="mt-4 space-y-3 text-sm">
+
+<div className="rounded-xl bg-zinc-50 p-3">
+🎉 Welcome to Vdory AI
+</div>
+
+<div className="rounded-xl bg-zinc-50 p-3">
+📹 Video export completed
+</div>
+
+<div className="rounded-xl bg-zinc-50 p-3">
+⚡ Credits refreshed
+</div>
+
+<div className="rounded-xl bg-zinc-50 p-3">
+🚀 Your first project was created
 </div>
 
 </div>
 </div>
+)}
+
+{profileOpen && (
+<div className="absolute right-6 top-16 w-72 rounded-2xl border border-zinc-200 bg-white shadow-xl p-4">
+<div className="border-b border-zinc-100 pb-3">
+<p className="font-semibold text-zinc-900">Dependu Das</p>
+<p className="text-sm text-zinc-500">dependu@example.com</p>
+</div>
+
+<div className="py-3 space-y-2">
+<button
+onClick={() => router.push("/account")}
+className="block w-full text-left text-sm hover:text-amber-600"
+>
+My Account
+</button>
+
+<button
+onClick={() => router.push("/settings")}
+className="block w-full text-left text-sm hover:text-amber-600"
+>
+Settings
+</button>
+
+<button
+onClick={() => router.push("/billing")}
+className="block w-full text-left text-sm hover:text-amber-600"
+>
+Billing & Plans
+</button>
+
+<button
+onClick={() => router.push("/usage")}
+className="block w-full text-left text-sm hover:text-amber-600"
+>
+Usage & Credits
+</button>
+
+<button
+onClick={() => router.push("/support")}
+className="block w-full text-left text-sm hover:text-amber-600"
+>
+Help & Support
+</button>
+</div>
+
+<div className="border-t border-zinc-100 pt-3">
+<button className="text-sm text-red-500">
+Sign Out
+</button>
+</div>
+</div>
+)}
+
 </header>
 
 {/* Welcome Section */}

@@ -62,7 +62,6 @@ ffmpeg()
 await new Promise((resolve, reject) => {
 ffmpeg(mergedPath)
 .setStartTime(0)
-.setDuration(5)
 .output(outputPath)
 .on("end", () => {
 console.log("RENDER COMPLETE:");

@@ -102,7 +102,7 @@ Review, download and publish your content.
 <div>
 <div className="bg-black rounded-3xl overflow-hidden aspect-[9/16] w-full max-w-sm mx-auto">
 <video
-src="/renders/output.mp4"
+src={`/renders/output.mp4?v=${Date.now()}`}
 controls
 className="w-full h-full object-cover"
 />
