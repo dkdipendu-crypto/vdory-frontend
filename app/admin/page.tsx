@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+
 import {
 LineChart,
 Line,
@@ -11,7 +11,7 @@ PieChart,
 Pie,
 Cell,
 Legend,
-BarChart,
+BarChart, 
 Bar,
 } from "recharts";
 
@@ -46,17 +46,6 @@ const videoData = [
 export default function AdminPage() {
 return (
 <main className="min-h-screen bg-zinc-50">
-<header className="sticky top-0 z-50 bg-white border-b border-zinc-200">
-<div className="max-w-7xl mx-auto px-6 h-16 flex items-center">
-<Image
-src="/logo-vdory.png"
-alt="VDORY AI"
-width={110}
-height={20}
-/>
-
-</div>
-</header>
 
 <div className="max-w-7xl mx-auto px-6 py-8">
 <div className="max-w-7xl mx-auto px-6 py-8 flex justify-between items-center">
