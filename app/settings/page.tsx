@@ -111,10 +111,8 @@ English
 </div>
 </div>
 <div className="mt-6 rounded-3xl border border-red-200 bg-red-50 p-10">
-<h2 className="text-2xl font-semibold text-red-700">
-Danger Zone
-</h2>
-<div className="mt-6 flex items-center justify-between">
+
+<div className="flex flex-col items-start gap-4">
 <div>
 <p className="font-medium text-red-700">
 Delete Account
@@ -125,7 +123,7 @@ Permanently delete your Vdory account and all associated data.
 </p>
 </div>
 
-<button className="rounded-xl bg-red-600 px-5 py-2 text-sm text-white hover:bg-red-700">
+<button className="rounded-xl bg-red-600 px-6 py-3 text-sm text-white hover:bg-red-700">
 Delete Account
 </button>
 </div>

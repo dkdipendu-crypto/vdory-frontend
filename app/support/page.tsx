@@ -3,7 +3,7 @@ return (
 <main className="min-h-screen bg-zinc-50">
 <div className="max-w-5xl mx-auto px-6 py-12">
 
-<h1 className="text-4xl font-bold">
+<h1 className="text-4xl font-bold text-zinc-900">
 Help & Support
 </h1>
 

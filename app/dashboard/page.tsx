@@ -48,26 +48,26 @@ D
 {notificationOpen && (
 <div className="absolute top-16 right-4 left-4 rounded-2xl border border-zinc-200 bg-white p-4 shadow-lg">
 
-<h3 className="font-semibold">
+<h3 className="font-semibold text-zinc-900">
 Notifications
 </h3>
 
-<div className="mt-4 space-y-3 text-sm">
+<div className="mt-4 space-y-3 text-sm text-zinc-800">
 
 <div className="rounded-xl bg-zinc-50 p-3">
-🎉 Welcome to Vdory AI
+• Welcome to Vdory AI
 </div>
 
 <div className="rounded-xl bg-zinc-50 p-3">
-📹 Video export completed
+• Video export completed
 </div>
 
 <div className="rounded-xl bg-zinc-50 p-3">
-⚡ Credits refreshed
+• Credits refreshed
 </div>
 
 <div className="rounded-xl bg-zinc-50 p-3">
-🚀 Your first project was created
+• Your first project was created
 </div>
 
 </div>

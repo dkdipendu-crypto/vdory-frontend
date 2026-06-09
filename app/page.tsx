@@ -68,10 +68,13 @@ Login
 <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-8">
 
 <div className="flex gap-8 text-zinc-600 text-sm">
-<a href="#">About</a>
-<a href="#">Contact</a>
-<a href="#">Privacy Policy</a>
-<a href="#">FAQs</a>
+<Link href="/about">About</Link>
+
+<Link href="/support">Contact</Link>
+
+<Link href="/privacy">Privacy Policy</Link>
+
+<Link href="/faq">FAQs</Link>
 </div>
 </div>
 
