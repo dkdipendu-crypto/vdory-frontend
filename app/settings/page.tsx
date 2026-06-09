@@ -10,14 +10,14 @@ Settings
 Manage your account preferences.
 </p>
 <div className="mt-8 rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm">
-<h2 className="text-xl font-semibold mb-6">
+<h2 className="text-xl font-semibold mb-6 text-zinc-900">
 Notification Preferences
 </h2>
 
 <div className="space-y-4">
 <div className="flex items-center justify-between">
 <div>
-<p className="font-medium">Email Notifications</p>
+<p className="font-medium text-zinc-900">Email Notifications</p>
 <p className="text-sm text-zinc-500">
 Receive important account updates by email.
 </p>
@@ -30,7 +30,7 @@ ON
 
 <div className="flex items-center justify-between">
 <div>
-<p className="font-medium">Product Updates</p>
+<p className="font-medium text-zinc-900">Product Updates</p>
 <p className="text-sm text-zinc-500">
 Receive updates about new Vdory features.
 </p>
@@ -43,14 +43,14 @@ ON
 </div>
 </div>
 <div className="mt-6 rounded-3xl border border-zinc-200 bg-white p-8 shadow-sm">
-<h2 className="mb-6 text-xl font-semibold">
+<h2 className="mb-6 text-xl font-semibold text-zinc-900">
 Account Preferences
 </h2>
 
 <div className="space-y-4">
 <div className="flex items-center justify-between">
 <div>
-<p className="font-medium">Change Password</p>
+<p className="font-medium text-zinc-900">Change Password</p>
 <p className="text-sm text-zinc-500">
 Update your account password.
 </p>
@@ -61,9 +61,9 @@ Change
 </button>
 </div>
 
-<div className="flex items-center justify-between">
+<div className="flex items-center justify-between gap-4">
 <div>
-<p className="font-medium">Sign Out From All Devices</p>
+<p className="font-medium text-zinc-900">Sign Out From All Devices</p>
 <p className="text-sm text-zinc-500">
 End all active sessions across devices.
 </p>
@@ -76,34 +76,34 @@ Sign Out
 </div>
 </div>
 <div className="mt-6 rounded-3xl border border-zinc-200 bg-white p-10 shadow-sm">
-<h2 className="mb-6 text-xl font-semibold">
+<h2 className="mb-6 text-xl font-semibold text-zinc-900">
 Content Preferences
 </h2>
 
 <div className="mt-8 space-y-4">
 
-<div className="flex items-center justify-between">
+<div className="flex items-center justify-between gap-4">
 <div>
-<p className="font-medium">Preferred Aspect Ratio</p>
+<p className="font-medium text-zinc-900">Preferred Aspect Ratio</p>
 <p className="text-sm text-zinc-500">
 Default export format for videos.
 </p>
 </div>
 
-<button className="rounded-xl border border-zinc-300 px-4 py-2 text-sm">
+<button className="rounded-xl border border-zinc-300 px-4 py-2 text-sm text-zinc-900">
 16:9
 </button>
 </div>
 
-<div className="flex items-center justify-between">
+<div className="flex items-center justify-between gap-4">
 <div>
-<p className="font-medium">Preferred Language</p>
+<p className="font-medium text-zinc-900">Preferred Language</p>
 <p className="text-sm text-zinc-500">
 Default language for captions and outputs.
 </p>
 </div>
 
-<button className="rounded-xl border border-zinc-300 px-4 py-2 text-sm">
+<button className="rounded-xl border border-zinc-300 px-4 py-2 text-sm text-zinc-900">
 English
 </button>
 </div>

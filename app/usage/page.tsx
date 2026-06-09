@@ -14,7 +14,7 @@ Track your account usage and available credits.
 {/* Usage Overview */}
 
 <div className="mt-10 rounded-3xl border border-zinc-200 bg-white p-8">
-<h2 className="text-xl font-semibold">
+<h2 className="text-xl font-semibold text-zinc-900">
 Usage Overview
 </h2>
 
@@ -25,7 +25,7 @@ Usage Overview
 Current Plan
 </p>
 
-<p className="mt-1 font-medium">
+<p className="mt-1 font-medium text-zinc-900">
 Vdory Pro
 </p>
 </div>
@@ -35,7 +35,7 @@ Vdory Pro
 Credits Remaining
 </p>
 
-<p className="mt-1 font-medium">
+<p className="mt-1 font-medium text-zinc-900">
 850
 </p>
 </div>
@@ -45,7 +45,7 @@ Credits Remaining
 Credits Used
 </p>
 
-<p className="mt-1 font-medium">
+<p className="mt-1 font-medium text-zinc-900">
 150
 </p>
 </div>
@@ -55,7 +55,7 @@ Credits Used
 Monthly Limit
 </p>
 
-<p className="mt-1 font-medium">
+<p className="mt-1 font-medium text-zinc-900">
 1000
 </p>
 </div>
@@ -66,7 +66,7 @@ Monthly Limit
 {/* Activity Summary */}
 
 <div className="mt-6 rounded-3xl border border-zinc-200 bg-white p-8">
-<h2 className="text-xl font-semibold">
+<h2 className="text-xl font-semibold text-zinc-900">
 Activity Summary
 </h2>
 
@@ -77,7 +77,7 @@ Activity Summary
 Projects Generated
 </p>
 
-<p className="mt-1 font-medium">
+<p className="mt-1 font-medium text-zinc-900">
 12
 </p>
 </div>
@@ -87,7 +87,7 @@ Projects Generated
 Videos Rendered
 </p>
 
-<p className="mt-1 font-medium">
+<p className="mt-1 font-medium text-zinc-900">
 8
 </p>
 </div>
@@ -97,7 +97,7 @@ Videos Rendered
 AI Generations
 </p>
 
-<p className="mt-1 font-medium">
+<p className="mt-1 font-medium text-zinc-900">
 43
 </p>
 </div>
@@ -107,7 +107,7 @@ AI Generations
 Export Downloads
 </p>
 
-<p className="mt-1 font-medium">
+<p className="mt-1 font-medium text-zinc-900">
 17
 </p>
 </div>
@@ -118,7 +118,7 @@ Export Downloads
 {/* Billing Cycle */}
 
 <div className="mt-6 rounded-3xl border border-zinc-200 bg-white p-8">
-<h2 className="text-xl font-semibold">
+<h2 className="text-xl font-semibold text-zinc-900">
 Billing Cycle
 </h2>
 
@@ -135,10 +135,10 @@ Next Reset Date: Jul 1
 
 {/* Upgrade */}
 
-<div className="mt-6 rounded-3xl border border-zinc-200 bg-white p-8 flex items-center justify-between">
+<div className="mt-6 rounded-3xl border border-zinc-200 bg-white p-8 flex items-center justify-between gap-6">
 
-<div>
-<h2 className="text-xl font-semibold">
+<div className="flex-1">
+<h2 className="text-xl font-semibold text-zinc-900">
 Need More Credits?
 </h2>
 
@@ -147,7 +147,7 @@ Upgrade your plan for higher limits.
 </p>
 </div>
 
-<button className="rounded-xl bg-black px-5 py-2 text-sm text-white">
+<button className="rounded-xl bg-black px-5 py-2 text-sm text-white min-w-[120px]">
 Upgrade
 </button>
 

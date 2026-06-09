@@ -11,13 +11,13 @@ Manage your subscription and invoices.
 </p>
 
 <div className="mt-10 rounded-3xl border border-zinc-200 bg-white p-8">
-<h2 className="text-xl font-semibold">
+<h2 className="text-xl font-semibold text-zinc-900">
 Current Plan
 </h2>
 
 <div className="mt-6 flex items-center justify-between">
 <div>
-<p className="font-medium">
+<p className="font-medium text-zinc-900">
 Vdory Pro
 </p>
 
@@ -33,7 +33,7 @@ Upgrade
 </div>
 
 <div className="mt-6 rounded-3xl border border-zinc-200 bg-white p-8">
-<h2 className="text-xl font-semibold">
+<h2 className="text-xl font-semibold text-zinc-900">
 Payment Method
 </h2>
 
@@ -43,7 +43,7 @@ Visa ending in 4242
 </div>
 
 <div className="mt-6 rounded-3xl border border-zinc-200 bg-white p-8">
-<h2 className="text-xl font-semibold">
+<h2 className="text-xl font-semibold text-zinc-900">
 Invoice History
 </h2>
 

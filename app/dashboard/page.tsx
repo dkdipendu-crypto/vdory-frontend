@@ -46,7 +46,7 @@ D
 </div>
 </div>
 {notificationOpen && (
-<div className="absolute right-24 top-16 w-80 rounded-2xl border border-zinc-200 bg-white p-4 shadow-lg">
+<div className="absolute top-16 right-4 left-4 rounded-2xl border border-zinc-200 bg-white p-4 shadow-lg">
 
 <h3 className="font-semibold">
 Notifications
@@ -84,35 +84,35 @@ Notifications
 <div className="py-3 space-y-2">
 <button
 onClick={() => router.push("/account")}
-className="block w-full text-left text-sm hover:text-amber-600"
+className="block w-full text-left text-sm text-zinc-800 hover:text-amber-600"
 >
 My Account
 </button>
 
 <button
 onClick={() => router.push("/settings")}
-className="block w-full text-left text-sm hover:text-amber-600"
+className="block w-full text-left text-sm text-zinc-800 hover:text-amber-600"
 >
 Settings
 </button>
 
 <button
 onClick={() => router.push("/billing")}
-className="block w-full text-left text-sm hover:text-amber-600"
+className="block w-full text-left text-sm text-zinc-800 hover:text-amber-600"
 >
 Billing & Plans
 </button>
 
 <button
 onClick={() => router.push("/usage")}
-className="block w-full text-left text-sm hover:text-amber-600"
+className="block w-full text-left text-sm text-zinc-800 hover:text-amber-600"
 >
 Usage & Credits
 </button>
 
 <button
 onClick={() => router.push("/support")}
-className="block w-full text-left text-sm hover:text-amber-600"
+className="block w-full text-left text-sm text-zinc-800 hover:text-amber-600"
 >
 Help & Support
 </button>

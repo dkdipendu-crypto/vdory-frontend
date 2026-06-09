@@ -14,27 +14,27 @@ Need assistance? We're here to help.
 {/* Contact Support */}
 
 <div className="mt-10 rounded-3xl border border-zinc-200 bg-white p-8">
-<h2 className="text-xl font-semibold">
+<h2 className="text-xl font-semibold text-zinc-900">
 Contact Support
 </h2>
 
 <div className="mt-4 space-y-2">
-<p>Email: support@vdory.ai</p>
-<p>Response Time: Within 24 hours</p>
+<p className="text-zinc-700">Email: support@vdory.ai</p>
+<p className="text-zinc-700">Response Time: Within 24 hours</p>
 </div>
 </div>
 
 {/* FAQ */}
 
 <div className="mt-6 rounded-3xl border border-zinc-200 bg-white p-8">
-<h2 className="text-xl font-semibold">
+<h2 className="text-xl font-semibold text-zinc-900">
 Frequently Asked Questions
 </h2>
 
 <div className="mt-4 space-y-4">
 
 <div>
-<p className="font-medium">
+<p className="font-medium text-zinc-900">
 How do credits work?
 </p>
 
@@ -44,7 +44,7 @@ Credits are consumed when generating content and rendering videos.
 </div>
 
 <div>
-<p className="font-medium">
+<p className="font-medium text-zinc-900">
 Can I upgrade my plan anytime?
 </p>
 
@@ -54,7 +54,7 @@ Yes, plans can be upgraded at any time.
 </div>
 
 <div>
-<p className="font-medium">
+<p className="font-medium text-zinc-900">
 How can I cancel my subscription?
 </p>
 
@@ -69,7 +69,7 @@ Subscription controls will be available in Billing & Plans.
 {/* Documentation */}
 
 <div className="mt-6 rounded-3xl border border-zinc-200 bg-white p-8">
-<h2 className="text-xl font-semibold">
+<h2 className="text-xl font-semibold text-zinc-900">
 Documentation
 </h2>
 
