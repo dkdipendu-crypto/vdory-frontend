@@ -35,7 +35,7 @@ Turn raw footage into publish-ready social content in minutes.
 <div className="flex items-center justify-center px-6 py-6 lg:py-6">
 <div className="w-full max-w-lg mx-auto">
 
-<div className="text-center mb-8">
+<div className="text-center mb-6">
 <Image
 src="/logo-vdory.png"
 alt="VDORY AI"
