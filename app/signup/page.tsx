@@ -53,7 +53,7 @@ Start producing AI-powered content with VDORY.
 </p>
 </div>
 
-<button className="w-full rounded-full border border-zinc-300 py-3 text-zinc-700 font-medium hover:bg-zinc-50 transition">
+<button className="w-full rounded-full border border-zinc-300 py-2 text-zinc-700 font-medium hover:bg-zinc-50 transition">
 Continue with Google
 </button>
 
@@ -63,28 +63,28 @@ Continue with Google
 <div className="h-px flex-1 bg-zinc-200"></div>
 </div>
 
-<form className="space-y-4">
+<form className="space-y-3">
 <input
 type="text"
 placeholder="First Name"
-className="w-full rounded-xl border border-zinc-300 px-4 py-3 text-zinc-900 placeholder:text-zinc-500 outline-none focus:border-black"
+className="w-full rounded-xl border border-zinc-300 px-4 py-2 text-zinc-900 placeholder:text-zinc-500 outline-none focus:border-black"
 />
 
 <input
 type="email"
 placeholder="Email Address"
-className="w-full rounded-xl border border-zinc-300 px-4 py-3 text-zinc-900 placeholder:text-zinc-500 outline-none focus:border-black"
+className="w-full rounded-xl border border-zinc-300 px-4 py-2 text-zinc-900 placeholder:text-zinc-500 outline-none focus:border-black"
 />
 
 <input
 type="password"
 placeholder="Password"
-className="w-full rounded-xl border border-zinc-300 px-4 py-3 text-zinc-900 placeholder:text-zinc-500 outline-none focus:border-black"
+className="w-full rounded-xl border border-zinc-300 px-4 py-2 text-zinc-900 placeholder:text-zinc-500 outline-none focus:border-black"
 />
 
 <button
 type="submit"
-className="w-full rounded-xl bg-black text-white py-3 font-medium hover:opacity-90 transition"
+className="w-full rounded-xl bg-black text-white py-2 font-medium hover:opacity-90 transition"
 >
 Create Account
 </button>
