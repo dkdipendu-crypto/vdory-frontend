@@ -44,11 +44,11 @@ height={23}
 className="mx-auto lg:hidden"
 />
 
-<h2 className="mt-6 text-[2rem] sm:text-[2.3rem] lg:text-[2.5rem] font-extrabold text-zinc-900 tracking-tight">
+<h2 className="mt-6 text-[1.75rem] sm:text-[2rem] lg:text-[2.2rem] font-extrabold text-zinc-900 tracking-tight">
 Create Your Account
 </h2>
 
-<p className="mt-3 text-zinc-600">
+<p className="mt-3 text-sm text-zinc-600">
 Start producing AI-powered content with VDORY.
 </p>
 </div>
