@@ -45,9 +45,9 @@ const videoData = [
 ];
 export default function AdminPage() {
 return (
-<main className="min-h-screen bg-zinc-50">
+<main className="p-6 bg-zinc-50 overflow-x-hidden">
 
-<div className="max-w-7xl mx-auto px-6 py-8">
+<div className="w-full">
 <div className="max-w-7xl mx-auto px-6 py-8 flex justify-between items-center">
 <div>
 <h2 className="text-3xl font-bold text-black">
