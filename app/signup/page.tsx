@@ -44,7 +44,7 @@ height={23}
 className="mx-auto lg:hidden"
 />
 
-<h2 className="mt-6 text-[2.2rem] sm:text-[2.6rem] lg:text-[2.8rem] font-extrabold text-zinc-900 tracking-tight">
+<h2 className="mt-6 text-[2rem] sm:text-[2.3rem] lg:text-[2.5rem] font-extrabold text-zinc-900 tracking-tight">
 Create Your Account
 </h2>
 
