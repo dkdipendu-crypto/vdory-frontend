@@ -37,90 +37,99 @@ priority
 </div>
 <Link
 href="/admin"
+onClick={() => setSidebarOpen(false)}
 className={`block w-full text-lg py-2 px-6 font-medium ${
 pathname === "/admin"
 ? "bg-white text-black"
-: "text-white"
+: "text-white hover:bg-slate-200 hover:text-black"
 }`}
 >
 Overview
 </Link>
 <Link
 href="/admin/users"
+onClick={() => setSidebarOpen(false)}
 className={`block w-full text-lg py-2 px-6 font-medium ${
 pathname === "/admin/users"
 ? "bg-white text-black"
-: "text-white"
+: "text-white hover:bg-slate-200 hover:text-black"
 }`}
 >
 Users
 </Link>
 <Link
 href="/admin/projects"
+onClick={() => setSidebarOpen(false)}
 className={`block w-full text-lg py-2 px-6 font-medium ${
 pathname === "/admin/projects"
 ? "bg-white text-black"
-: "text-white"
+: "text-white hover:bg-slate-200 hover:text-black"
 }`}
 >
 Projects
 </Link>
 <Link
 href="/admin/render-jobs"
+onClick={() => setSidebarOpen(false)}
 className={`block w-full text-lg py-2 px-6 font-medium ${
 pathname === "/admin/render-jobs"
 ? "bg-white text-black"
-: "text-white"
+: "text-white hover:bg-slate-200 hover:text-black"
 }`}
 >
 Render Jobs
 </Link>
 <Link
 href="/admin/subscriptions"
+onClick={() => setSidebarOpen(false)}
 className={`block w-full text-lg py-2 px-6 font-medium ${
 pathname === "/admin/subscriptions"
 ? "bg-white text-black"
-: "text-white"
+: "text-white hover:bg-slate-200 hover:text-black"
 }`}
 >
 Subscriptions
 </Link>
 <Link
 href="/admin/credits"
+onClick={() => setSidebarOpen(false)}
 className={`block w-full text-lg py-2 px-6 font-medium ${
 pathname === "/admin/credits"
 ? "bg-white text-black"
-: "text-white"
+: "text-white hover:bg-slate-200 hover:text-black"
 }`}
 >
 Credits
 </Link>
 <Link
 href="/admin/payments"
+onClick={() => setSidebarOpen(false)}
 className={`block w-full text-lg py-2 px-6 font-medium ${
 pathname === "/admin/payments"
 ? "bg-white text-black"
-: "text-white"
+: "text-white hover:bg-slate-200 hover:text-black"
 }`}
 >
 Payments
 </Link>
 <Link
 href="/admin/notifications"
+onClick={() => setSidebarOpen(false)}
 className={`block w-full text-lg py-2 px-6 font-medium ${
 pathname === "/admin/notifications"
 ? "bg-white text-black"
-: "text-white"
+: "text-white hover:bg-slate-200 hover:text-black"
 }`}
 >
 Notifications
 </Link>
 <Link
 href="/admin/settings"
+onClick={() => setSidebarOpen(false)}
 className={`block w-full text-lg py-2 px-6 font-medium ${
 pathname === "/admin/settings"
 ? "bg-white text-black"
-: "text-white"
+: "text-white hover:bg-slate-200 hover:text-black"
 }`}
 >
 Settings
