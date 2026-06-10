@@ -12,20 +12,20 @@ return (
 <Image
 src="/vdory-img.png"
 alt="VDORY AI"
-width={160}
-height={23}
+width={140}
+height={20}
 priority
 />
 
-<p className="mt-3 text-zinc-400">
+<p className="mt-2 text-sm text-zinc-400">
 Shaping Digital Reality
 </p>
 
-<h1 className="mt-10 text-5xl font-bold leading-tight">
+<h1 className="mt-8 text-4xl font-bold leading-tight">
 Create Content Faster With AI
 </h1>
 
-<p className="mt-6 text-lg text-zinc-400">
+<p className="mt-4 text-lg text-zinc-400">
 Turn raw footage into publish-ready social content in minutes.
 </p>
 </div>
