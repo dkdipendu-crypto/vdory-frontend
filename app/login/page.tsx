@@ -12,30 +12,30 @@ return (
 <Image
 src="/vdory-img.png"
 alt="VDORY AI"
-width={160}
-height={23}
+width={140}
+height={20}
 priority
 />
 
-<p className="mt-3 text-zinc-400">
+<p className="mt-2 text-sm text-zinc-400">
 Shaping Digital Reality
 </p>
 
-<h1 className="mt-10 text-5xl font-bold leading-tight">
+<h1 className="mt-8 text-4xl font-bold leading-tight">
 Create Content Faster With AI
 </h1>
 
-<p className="mt-6 text-lg text-zinc-400">
+<p className="mt-4 text-base text-zinc-400">
 Turn raw footage into publish-ready social content in minutes.
 </p>
 </div>
 </div>
 
 {/* Right Side */}
-<div className="flex items-start justify-center px-6 py-16 lg:py-24">
+<div className="flex items-start justify-center px-6 py-6 lg:py-6">
 <div className="w-full max-w-lg mx-auto">
 
-<div className="text-center mb-8">
+<div className="text-center mb-6">
 <Image
 src="/logo-vdory.png"
 alt="VDORY AI"
@@ -44,47 +44,47 @@ height={23}
 className="mx-auto lg:hidden"
 />
 
-<h2 className="mt-6 text-[2.2rem] sm:text-[2.6rem] lg:text-[2.8rem] font-extrabold text-zinc-900 tracking-tight">
+<h2 className="mt-6 text-[1.75rem] sm:text-[2rem] lg:text-[2.2rem] font-extrabold text-zinc-900 tracking-tight">
 Welcome Back
 </h2>
 
-<p className="mt-3 text-zinc-600">
+<p className="mt-2 text-sm text-zinc-600">
 Log in to continue creating AI-powered content with VDORY.
 </p>
 </div>
 
-<button className="w-full rounded-full border border-zinc-300 py-3 text-zinc-700 font-medium hover:bg-zinc-50 transition">
+<button className="w-full rounded-full border border-zinc-300 py-2 text-zinc-700 font-medium hover:bg-zinc-50 transition">
 Continue with Google
 </button>
 
-<div className="flex items-center gap-4 my-6">
+<div className="flex items-center gap-4 my-4">
 <div className="h-px flex-1 bg-zinc-200"></div>
 <span className="text-sm text-zinc-500">OR</span>
 <div className="h-px flex-1 bg-zinc-200"></div>
 </div>
 
-<form className="space-y-4">
+<form className="space-y-3">
 <input
 type="email"
 placeholder="Email Address"
-className="w-full rounded-xl border border-zinc-300 px-4 py-3 text-zinc-900 placeholder:text-zinc-500 outline-none focus:border-black"
+className="w-full rounded-xl border border-zinc-300 px-4 py-2 text-zinc-900 placeholder:text-zinc-500 outline-none focus:border-black"
 />
 
 <input
 type="password"
 placeholder="Password"
-className="w-full rounded-xl border border-zinc-300 px-4 py-3 text-zinc-900 placeholder:text-zinc-500 outline-none focus:border-black"
+className="w-full rounded-xl border border-zinc-300 px-4 py-2 text-zinc-900 placeholder:text-zinc-500 outline-none focus:border-black"
 />
 
 <button
 type="submit"
-className="w-full rounded-xl bg-black text-white py-3 font-medium hover:opacity-90 transition"
+className="w-full rounded-xl bg-black text-white py-2 font-medium hover:opacity-90 transition"
 >
 Log In
 </button>
 </form>
 
-<p className="mt-4 text-center">
+<p className="mt-3 text-center">
 <Link
 href="#"
 className="text-sm text-zinc-600 underline"
@@ -93,7 +93,7 @@ Reset Password
 </Link>
 </p>
 
-<p className="mt-6 text-center text-sm text-zinc-600">
+<p className="mt-3 text-center text-sm text-zinc-600">
 Don't have an account?{" "}
 <Link
 href="/signup"
@@ -103,7 +103,7 @@ Sign Up
 </Link>
 </p>
 
-<p className="mt-8 text-center text-xs text-zinc-500 leading-6">
+<p className="mt-4 text-center text-xs text-zinc-500 leading-6">
 By logging in, you agree to our{" "}
 <a href="#" className="underline">
 Terms of Use
