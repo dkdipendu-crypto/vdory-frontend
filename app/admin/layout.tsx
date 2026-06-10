@@ -13,13 +13,13 @@ const [sidebarOpen, setSidebarOpen] = useState(false);
 const pathname = usePathname();
 return (
 <div className="min-h-screen bg-zinc-100">
-<div className="flex">
+<div className="flex min-h-screen">
 
 {/* Sidebar */}
 <aside
 className={`
 fixed top-0 left-0 z-50
-w-72 min-h-screen bg-slate-900
+w-64 min-h-screen bg-slate-900
 transform transition-transform duration-300
 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
 md:translate-x-0 md:static md:flex
@@ -138,10 +138,10 @@ Settings
 </aside>
 
 {/* Main Content */}
-<main className="flex-1">
+<main className="flex-1 min-w-0">
 
 {/* Top Header */}
-<header className="h-16 border-b border-zinc-200 bg-white flex items-center justify-between px-6">
+<header className="h-14 border-b border-zinc-200 bg-white flex items-center justify-between px-4">
 
 <div className="flex items-center gap-4">
 
@@ -152,7 +152,7 @@ onClick={() => setSidebarOpen(!sidebarOpen)}
 ☰
 </button>
 
-<div className="text-lg md:text-xl font-bold text-black whitespace-nowrap">
+<div className="text-base md:text-lg font-bold text-black whitespace-nowrap">
 Admin Dashboard
 </div>
 
@@ -165,17 +165,17 @@ Admin Dashboard
 <input
 type="text"
 placeholder="Search..."
-className="hidden md:block border border-gray-300 rounded-full px-5 py-2 w-96 text-sm"
+className="hidden md:block border border-gray-300 rounded-full px-5 py-2 w-80 text-sm"
 />
 
-<div className="w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center font-semibold">
+<div className="w-9 h-9 rounded-full bg-slate-900 text-white flex items-center justify-center font-semibold">
 D
 </div>
 </div>
 
 </header>
 
-<div className="p-6">
+<div className="p-4">
 {children}
 </div>
 
