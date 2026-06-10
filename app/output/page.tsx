@@ -97,7 +97,7 @@ Review, download and publish your content.
 </p>
 </div>
 
-<div className="mt-6 grid lg:grid-cols-2 gap-6">
+<div className="mt-6 grid lg:grid-cols-2 gap-10">
 {/* Video Preview */}
 <div>
 <div className="bg-black rounded-2xl overflow-hidden aspect-[9/16] w-full max-w-[280px] mx-auto">
