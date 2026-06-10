@@ -90,7 +90,7 @@ Create Account
 </button>
 </form>
 
-<p className="mt-6 text-center text-sm text-zinc-600">
+<p className="mt-3 text-center text-sm text-zinc-600">
 Already have an account?{" "}
 <Link
 href="/login"
@@ -100,7 +100,7 @@ Log In
 </Link>
 </p>
 
-<p className="mt-8 text-center text-xs text-zinc-500 leading-6">
+<p className="mt-4 text-center text-xs text-zinc-500 leading-6">
 By creating an account, you agree to our{" "}
 <a href="#" className="underline">
 Terms of Use
