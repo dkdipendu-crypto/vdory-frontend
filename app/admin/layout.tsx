@@ -19,26 +19,26 @@ return (
 <aside
 className={`
 fixed top-0 left-0 z-50
-w-64 min-h-screen bg-slate-900
+w-52 min-h-screen bg-slate-900
 transform transition-transform duration-300
 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
 md:translate-x-0 md:static md:flex
 `}
 >
 <nav className="space-y-3 w-full px-0">
-<div className="px-6 h-16 flex items-center">
+<div className="px-4 h-14 flex items-center">
 <Image
 src="/vdory-img.png"
 alt="VDORY"
-width={110}
-height={20}
+width={90}
+height={16}
 priority
 />
 </div>
 <Link
 href="/admin"
 onClick={() => setSidebarOpen(false)}
-className={`block w-full text-lg py-2 px-6 font-medium ${
+className={`block w-full text-lg py-2 px-4 font-medium ${
 pathname === "/admin"
 ? "bg-white text-black"
 : "text-white hover:bg-slate-200 hover:text-black"
@@ -49,7 +49,7 @@ Overview
 <Link
 href="/admin/users"
 onClick={() => setSidebarOpen(false)}
-className={`block w-full text-lg py-2 px-6 font-medium ${
+className={`block w-full text-lg py-2 px-4 font-medium ${
 pathname === "/admin/users"
 ? "bg-white text-black"
 : "text-white hover:bg-slate-200 hover:text-black"
@@ -60,7 +60,7 @@ Users
 <Link
 href="/admin/projects"
 onClick={() => setSidebarOpen(false)}
-className={`block w-full text-lg py-2 px-6 font-medium ${
+className={`block w-full text-lg py-2 px-4 font-medium ${
 pathname === "/admin/projects"
 ? "bg-white text-black"
 : "text-white hover:bg-slate-200 hover:text-black"
@@ -71,7 +71,7 @@ Projects
 <Link
 href="/admin/render-jobs"
 onClick={() => setSidebarOpen(false)}
-className={`block w-full text-lg py-2 px-6 font-medium ${
+className={`block w-full text-lg py-2 px-4 font-medium ${
 pathname === "/admin/render-jobs"
 ? "bg-white text-black"
 : "text-white hover:bg-slate-200 hover:text-black"
@@ -82,7 +82,7 @@ Render Jobs
 <Link
 href="/admin/subscriptions"
 onClick={() => setSidebarOpen(false)}
-className={`block w-full text-lg py-2 px-6 font-medium ${
+className={`block w-full text-lg py-2 px-4 font-medium ${
 pathname === "/admin/subscriptions"
 ? "bg-white text-black"
 : "text-white hover:bg-slate-200 hover:text-black"
@@ -93,7 +93,7 @@ Subscriptions
 <Link
 href="/admin/credits"
 onClick={() => setSidebarOpen(false)}
-className={`block w-full text-lg py-2 px-6 font-medium ${
+className={`block w-full text-lg py-2 px-4 font-medium ${
 pathname === "/admin/credits"
 ? "bg-white text-black"
 : "text-white hover:bg-slate-200 hover:text-black"
@@ -104,7 +104,7 @@ Credits
 <Link
 href="/admin/payments"
 onClick={() => setSidebarOpen(false)}
-className={`block w-full text-lg py-2 px-6 font-medium ${
+className={`block w-full text-lg py-2 px-4 font-medium ${
 pathname === "/admin/payments"
 ? "bg-white text-black"
 : "text-white hover:bg-slate-200 hover:text-black"
@@ -115,7 +115,7 @@ Payments
 <Link
 href="/admin/notifications"
 onClick={() => setSidebarOpen(false)}
-className={`block w-full text-lg py-2 px-6 font-medium ${
+className={`block w-full text-lg py-2 px-4 font-medium ${
 pathname === "/admin/notifications"
 ? "bg-white text-black"
 : "text-white hover:bg-slate-200 hover:text-black"
@@ -126,7 +126,7 @@ Notifications
 <Link
 href="/admin/settings"
 onClick={() => setSidebarOpen(false)}
-className={`block w-full text-lg py-2 px-6 font-medium ${
+className={`block w-full text-lg py-2 px-4 font-medium ${
 pathname === "/admin/settings"
 ? "bg-white text-black"
 : "text-white hover:bg-slate-200 hover:text-black"
