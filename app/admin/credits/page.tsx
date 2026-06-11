@@ -39,20 +39,20 @@ Monitor all credit transactions
 <input
 type="text"
 placeholder="Search by email..."
-className="w-full md:w-96 border border-gray-300 rounded-lg px-4 py-2 text-sm"
+className="w-full md:w-96 border border-gray-300 rounded-lg px-4 py-2 text-sm text-black placeholde:text-black bg-white"
 />
 </div>
 
 <div className="bg-white rounded-xl border border-gray-200 overflow-x-auto">
 <table className="w-full text-sm">
-<thead className="bg-gray-50">
+<thead className="bg-gray-100 text-black">
 <tr>
-<th className="text-left px-4 py-3">User Email</th>
-<th className="text-left px-4 py-3">Credit Amount</th>
-<th className="text-left px-4 py-3">Credit Type</th>
-<th className="text-left px-4 py-3">Transaction Type</th>
-<th className="text-left px-4 py-3">Balance After</th>
-<th className="text-left px-4 py-3">Notes</th>
+<th className="text-left px-4 py-3 text-black font-semibold">User Email</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Credit Amount</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Credit Type</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Transaction Type</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Balance After</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Notes</th>
 </tr>
 </thead>
 
@@ -60,7 +60,7 @@ className="w-full md:w-96 border border-gray-300 rounded-lg px-4 py-2 text-sm"
 {credits.map((credit, index) => (
 <tr
 key={index}
-className="border-t border-gray-100 hover:bg-gray-50"
+className="border-t border-gray-100 hover:bg-gray-50 text-black"
 >
 <td className="px-4 py-3">{credit.email}</td>
 <td className="px-4 py-3">{credit.amount}</td>

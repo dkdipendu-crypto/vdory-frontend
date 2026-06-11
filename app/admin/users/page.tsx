@@ -42,21 +42,21 @@ Manage all registered users
 <input
 type="text"
 placeholder="Search by email..."
-className="w-full md:w-96 border border-gray-300 rounded-lg px-4 py-2 text-sm"
+className="w-full md:w-96 border border-gray-300 rounded-lg px-4 py-2 text-sm text-black placeholde:text-black bg-white"
 />
 </div>
 
 <div className="bg-white rounded-xl border border-gray-200 overflow-x-auto">
 <table className="w-full text-sm">
-<thead className="bg-gray-50">
+<thead className="bg-gray-100 text-black">
 <tr>
-<th className="text-left px-4 py-3">Name</th>
-<th className="text-left px-4 py-3">Email</th>
-<th className="text-left px-4 py-3">Plan</th>
-<th className="text-left px-4 py-3">Credits</th>
-<th className="text-left px-4 py-3">Projects</th>
-<th className="text-left px-4 py-3">Status</th>
-<th className="text-left px-4 py-3">Last Login</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Name</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Email</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Plan</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Credits</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Projects</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Status</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Last Login</th>
 </tr>
 </thead>
 
@@ -64,7 +64,7 @@ className="w-full md:w-96 border border-gray-300 rounded-lg px-4 py-2 text-sm"
 {users.map((user, index) => (
 <tr
 key={index}
-className="border-t border-gray-100"
+className="border-t border-gray-100 text-black"
 >
 <td className="px-4 py-3">{user.name}</td>
 <td className="px-4 py-3">{user.email}</td>

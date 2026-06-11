@@ -47,20 +47,20 @@ Monitor all system notifications and activity logs
 <input
 type="text"
 placeholder="Search by email..."
-className="w-full md:w-96 border border-gray-300 rounded-lg px-4 py-2 text-sm"
+className="w-full md:w-96 border border-gray-300 rounded-lg px-4 py-2 text-sm text-black placeholde:text-black bg-white"
 />
 </div>
 
 <div className="bg-white rounded-xl border border-gray-200 overflow-x-auto">
 <table className="w-full text-sm">
-<thead className="bg-gray-50">
+<thead className="bg-gray-100 text-black">
 <tr>
-<th className="text-left px-4 py-3">User Email</th>
-<th className="text-left px-4 py-3">Type</th>
-<th className="text-left px-4 py-3">Title</th>
-<th className="text-left px-4 py-3">Channel</th>
-<th className="text-left px-4 py-3">Status</th>
-<th className="text-left px-4 py-3">Created At</th>
+<th className="text-left px-4 py-3 text-black font-semibold">User Email</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Type</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Title</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Channel</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Status</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Created At</th>
 </tr>
 </thead>
 
@@ -68,7 +68,7 @@ className="w-full md:w-96 border border-gray-300 rounded-lg px-4 py-2 text-sm"
 {notifications.map((item, index) => (
 <tr
 key={index}
-className="border-t border-gray-100 hover:bg-gray-50"
+className="border-t border-gray-100 hover:bg-gray-50 text-black"
 >
 <td className="px-4 py-3">{item.email}</td>
 <td className="px-4 py-3">{item.type}</td>

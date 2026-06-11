@@ -48,23 +48,23 @@ Manage all customer subscriptions
 <input
 type="text"
 placeholder="Search by email..."
-className="w-full md:w-96 border border-gray-300 rounded-lg px-4 py-2 text-sm"
+className="w-full md:w-96 border border-gray-300 rounded-lg px-4 py-2 text-sm text-black placeholde:text-black bg-white"
 />
 </div>
 
 <div className="bg-white rounded-xl border border-gray-200 overflow-x-auto">
 <table className="w-full text-sm">
-<thead className="bg-gray-50">
+<thead className="bg-gray-100 text-black">
 <tr>
-<th className="text-left px-4 py-3">User Email</th>
-<th className="text-left px-4 py-3">Plan Type</th>
-<th className="text-left px-4 py-3">Billing Cycle</th>
-<th className="text-left px-4 py-3">Amount Paid</th>
-<th className="text-left px-4 py-3">Payment Status</th>
-<th className="text-left px-4 py-3">Start Date</th>
-<th className="text-left px-4 py-3">End Date</th>
-<th className="text-left px-4 py-3">Provider</th>
-<th className="text-left px-4 py-3">Transaction ID</th>
+<th className="text-left px-4 py-3 text-black font-semibold">User Email</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Plan Type</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Billing Cycle</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Amount Paid</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Payment Status</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Start Date</th>
+<th className="text-left px-4 py-3 text-black font-semibold">End Date</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Provider</th>
+<th className="text-left px-4 py-3 text-black font-semibold">Transaction ID</th>
 </tr>
 </thead>
 
@@ -72,7 +72,7 @@ className="w-full md:w-96 border border-gray-300 rounded-lg px-4 py-2 text-sm"
 {subscriptions.map((sub, index) => (
 <tr
 key={index}
-className="border-t border-gray-100 hover:bg-gray-50"
+className="border-t border-gray-100 hover:bg-gray-50 text-black"
 >
 <td className="px-4 py-3">{sub.email}</td>
 <td className="px-4 py-3">{sub.plan}</td>
