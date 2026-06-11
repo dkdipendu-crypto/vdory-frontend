@@ -38,8 +38,8 @@ priority
 <Link
 href="/admin"
 onClick={() => setSidebarOpen(false)}
-className={`block w-full text-lg py-2 px-4 font-medium ${
-pathname === "/admin"
+className={`block w-full text-base py-2 px-4 font-medium ${
+pathname === "/admin" || pathname === "/admin/overview"
 ? "bg-white text-black"
 : "text-white hover:bg-slate-200 hover:text-black"
 }`}
@@ -49,7 +49,7 @@ Overview
 <Link
 href="/admin/users"
 onClick={() => setSidebarOpen(false)}
-className={`block w-full text-lg py-2 px-4 font-medium ${
+className={`block w-full text-base py-2 px-4 font-medium ${
 pathname === "/admin/users"
 ? "bg-white text-black"
 : "text-white hover:bg-slate-200 hover:text-black"
@@ -60,7 +60,7 @@ Users
 <Link
 href="/admin/projects"
 onClick={() => setSidebarOpen(false)}
-className={`block w-full text-lg py-2 px-4 font-medium ${
+className={`block w-full text-base py-2 px-4 font-medium ${
 pathname === "/admin/projects"
 ? "bg-white text-black"
 : "text-white hover:bg-slate-200 hover:text-black"
@@ -71,7 +71,7 @@ Projects
 <Link
 href="/admin/render-jobs"
 onClick={() => setSidebarOpen(false)}
-className={`block w-full text-lg py-2 px-4 font-medium ${
+className={`block w-full text-base py-2 px-4 font-medium ${
 pathname === "/admin/render-jobs"
 ? "bg-white text-black"
 : "text-white hover:bg-slate-200 hover:text-black"
@@ -82,7 +82,7 @@ Render Jobs
 <Link
 href="/admin/subscriptions"
 onClick={() => setSidebarOpen(false)}
-className={`block w-full text-lg py-2 px-4 font-medium ${
+className={`block w-full text-base py-2 px-4 font-medium ${
 pathname === "/admin/subscriptions"
 ? "bg-white text-black"
 : "text-white hover:bg-slate-200 hover:text-black"
@@ -93,7 +93,7 @@ Subscriptions
 <Link
 href="/admin/credits"
 onClick={() => setSidebarOpen(false)}
-className={`block w-full text-lg py-2 px-4 font-medium ${
+className={`block w-full text-base py-2 px-4 font-medium ${
 pathname === "/admin/credits"
 ? "bg-white text-black"
 : "text-white hover:bg-slate-200 hover:text-black"
@@ -104,7 +104,7 @@ Credits
 <Link
 href="/admin/payments"
 onClick={() => setSidebarOpen(false)}
-className={`block w-full text-lg py-2 px-4 font-medium ${
+className={`block w-full text-base py-2 px-4 font-medium ${
 pathname === "/admin/payments"
 ? "bg-white text-black"
 : "text-white hover:bg-slate-200 hover:text-black"
@@ -115,7 +115,7 @@ Payments
 <Link
 href="/admin/notifications"
 onClick={() => setSidebarOpen(false)}
-className={`block w-full text-lg py-2 px-4 font-medium ${
+className={`block w-full text-base py-2 px-4 font-medium ${
 pathname === "/admin/notifications"
 ? "bg-white text-black"
 : "text-white hover:bg-slate-200 hover:text-black"
@@ -124,9 +124,20 @@ pathname === "/admin/notifications"
 Notifications
 </Link>
 <Link
+href="/admin/assets"
+onClick={() => setSidebarOpen(false)}
+className={`block w-full text-base py-2 px-4 font-medium ${
+pathname === "/admin/assets"
+? "bg-white text-black"
+: "text-white hover:bg-slate-200 hover:text-black"
+}`}
+>
+Assets
+</Link>
+<Link
 href="/admin/settings"
 onClick={() => setSidebarOpen(false)}
-className={`block w-full text-lg py-2 px-4 font-medium ${
+className={`block w-full text-base py-2 px-4 font-medium ${
 pathname === "/admin/settings"
 ? "bg-white text-black"
 : "text-white hover:bg-slate-200 hover:text-black"
@@ -146,21 +157,21 @@ Settings
 <div className="flex items-center gap-4">
 
 <button
-className="md:hidden text-black text-2xl font-bold -mt-1"
+className="md:hidden text-black text-3xl font-bold -mt-1"
 onClick={() => setSidebarOpen(!sidebarOpen)}
 >
 ☰
 </button>
 
-<div className="text-base md:text-lg font-bold text-black whitespace-nowrap">
+<div className="text-lg md:text-x1 font-bold text-black whitespace-nowrap">
 Admin Dashboard
 </div>
 
 </div>
 
 <div className="flex items-center gap-4">
-<button className="md:hidden text-xl">
-🔍
+<button className="md:hidden text-5xl leading-none text-black">
+⌕
 </button>
 <input
 type="text"
@@ -168,7 +179,7 @@ placeholder="Search..."
 className="hidden md:block border border-gray-300 rounded-full px-5 py-2 w-80 text-sm"
 />
 
-<div className="w-9 h-9 rounded-full bg-slate-900 text-white flex items-center justify-center font-semibold">
+<div className="w-8 h-8 rounded-full bg-slate-900 text-white flex items-center justify-center font-semibold">
 D
 </div>
 </div>
