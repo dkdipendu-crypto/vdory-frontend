@@ -29,6 +29,17 @@ alert(error.message);
 return;
 }
 
+await supabase.from("profiles").insert([
+{
+email: email,
+full_name: firstName,
+available_credits: 100,
+plan_type: "Free",
+account_status: "Active",
+total_projects: 0,
+},
+]);
+
 alert(
 "Account created. Please check your email and verify your account."
 );
