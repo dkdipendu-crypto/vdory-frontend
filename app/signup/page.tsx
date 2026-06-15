@@ -1,7 +1,39 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { supabase } from "@/lib/supabase";
 
 export default function SignupPage() {
+const [firstName, setFirstName] = useState("");
+const [email, setEmail] = useState("");
+const [password, setPassword] = useState("");
+const handleSignup = async (
+e: React.FormEvent<HTMLFormElement>
+) => {
+e.preventDefault();
+
+const { error } = await supabase.auth.signUp({
+email,
+password,
+options: {
+data: {
+full_name: firstName,
+},
+},
+});
+
+if (error) {
+alert(error.message);
+return;
+}
+
+alert(
+"Account created. Please check your email and verify your account."
+);
+};
+
 return (
 <main className="min-h-screen bg-gradient-to-b from-white via-zinc-50 to-white">
 <div className="min-h-screen grid lg:grid-cols-2">
@@ -63,23 +95,38 @@ Continue with Google
 <div className="h-px flex-1 bg-zinc-200"></div>
 </div>
 
-<form className="space-y-3">
+<form
+className="space-y-3"
+onSubmit={handleSignup}
+>
 <input
 type="text"
 placeholder="First Name"
-className="w-full rounded-xl border border-zinc-300 px-4 py-2 text-zinc-900 placeholder:text-zinc-500 outline-none focus:border-black"
+value={firstName}
+onChange={(e) => setFirstName(e.target.value)}
+className="w-full rounded-xl border border-zinc-300 px-4 py-2
+text-zinc-900 placeholder:text-zinc-500 outline-none
+focus:border-black"
 />
 
 <input
 type="email"
 placeholder="Email Address"
-className="w-full rounded-xl border border-zinc-300 px-4 py-2 text-zinc-900 placeholder:text-zinc-500 outline-none focus:border-black"
+value={email}
+onChange={(e) => setEmail(e.target.value)}
+className="w-full rounded-xl border border-zinc-300 px-4 py-2
+text-zinc-900 placeholder:text-zinc-500 outline-none
+focus:border-black"
 />
 
 <input
 type="password"
 placeholder="Password"
-className="w-full rounded-xl border border-zinc-300 px-4 py-2 text-zinc-900 placeholder:text-zinc-500 outline-none focus:border-black"
+value={password}
+onChange={(e) => setPassword(e.target.value)}
+className="w-full rounded-xl border border-zinc-300 px-4 py-2
+text-zinc-900 placeholder:text-zinc-500 outline-none
+focus:border-black"
 />
 
 <button

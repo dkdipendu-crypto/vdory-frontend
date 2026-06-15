@@ -1,7 +1,31 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { supabase } from "@/lib/supabase";
+import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
+const [email, setEmail] = useState("");
+const [password, setPassword] = useState("");
+const router = useRouter();
+
+const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
+e.preventDefault();
+
+const { error } = await supabase.auth.signInWithPassword({
+email,
+password,
+});
+
+if (error) {
+alert(error.message);
+return;
+}
+router.push("/dashboard");
+};
+
 return (
 <main className="min-h-screen bg-gradient-to-b from-white via-zinc-50 to-white">
 <div className="min-h-screen grid lg:grid-cols-2">
@@ -63,16 +87,26 @@ Continue with Google
 <div className="h-px flex-1 bg-zinc-200"></div>
 </div>
 
-<form className="space-y-3">
+<form
+className="space-y-3"
+onSubmit={handleLogin}
+>
+
 <input
 type="email"
 placeholder="Email Address"
+value={email}
+onChange={(e) => setEmail(e.target.value)}
+required
 className="w-full rounded-xl border border-zinc-300 px-4 py-2 text-zinc-900 placeholder:text-zinc-500 outline-none focus:border-black"
 />
 
 <input
 type="password"
 placeholder="Password"
+value={password}
+onChange={(e) => setPassword(e.target.value)}
+required
 className="w-full rounded-xl border border-zinc-300 px-4 py-2 text-zinc-900 placeholder:text-zinc-500 outline-none focus:border-black"
 />
 
@@ -86,7 +120,7 @@ Log In
 
 <p className="mt-3 text-center">
 <Link
-href="#"
+href="/reset-password"
 className="text-sm text-zinc-600 underline"
 >
 Reset Password
