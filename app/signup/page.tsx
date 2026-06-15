@@ -29,7 +29,9 @@ alert(error.message);
 return;
 }
 
-await supabase.from("profiles").insert([
+const { data, error: profileError } = await supabase
+.from("profiles")
+.insert([
 {
 email: email,
 full_name: firstName,
@@ -39,6 +41,8 @@ account_status: "Active",
 total_projects: 0,
 },
 ]);
+console.log("PROFILE INSERT ERROR:", profileError);
+console.log("PROFILE INSERT DATA:", data);
 
 alert(
 "Account created. Please check your email and verify your account."
