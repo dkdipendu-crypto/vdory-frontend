@@ -40,9 +40,15 @@ plan_type: "Free",
 account_status: "Active",
 total_projects: 0,
 },
-]);
+])
+.select();
+
 console.log("PROFILE INSERT ERROR:", profileError);
 console.log("PROFILE INSERT DATA:", data);
+
+if (profileError) {
+alert(JSON.stringify(profileError));
+}
 
 alert(
 "Account created. Please check your email and verify your account."
