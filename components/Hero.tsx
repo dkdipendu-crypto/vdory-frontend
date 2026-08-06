@@ -66,7 +66,7 @@ Get Started
 
 <div className="max-w-7xl mx-auto px-6 pt-8 pb-8">
 
-<div className="grid lg:grid-cols-2 gap-16 items-center">
+<div className="grid lg:grid-cols-2 gap-16 items-start">
 
 {/* LEFT */}
 
@@ -116,37 +116,37 @@ you build.
 <div className="mt-8 max-w-[540px]">
 <div>
 
-<div className="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-3">
+<div className="grid grid-cols-2 lg:grid-cols-4 gap-y-4 lg:gap-y-3 justify-items-center">
 
-<div className="flex items-center gap-2 lg:gap-1">
+<div className="flex items-center justify-center gap-2 lg:gap-1">
 <div className="text-x1 lg:text-lg">⏰</div>
 <div>
 <p className="font-semibold text-sm lg:text-sm text-[#0E1B16]">15 Min</p>
-<p className="text-xs lg:text-xs text-gray-500">To Your Design</p>
+<p className="text-xs lg:text-xs text-[#C8A15A]">To Your Design</p>
 </div>
 </div>
 
-<div className="flex items-center gap-2 lg:gap-1">
+<div className="flex items-center justify-center gap-2 lg:gap-1">
 <div className="text-x1 lg:text-lg">📋</div>
 <div>
 <p className="font-semibold text-sm lg:text-sm text-[#0E1B16]">Accurate</p>
-<p className="text-xs lg:text-xs text-gray-500">Cost Estimation</p>
+<p className="text-xs lg:text-xs text-[#C8A15A]">Cost Estimation</p>
 </div>
 </div>
 
-<div className="flex items-center gap-2 lg:gap-1">
+<div className="flex items-center justify-center gap-2 lg:gap-1 w-full pl-4 lg:pl-0">
 <div className="text-x1 lg:text-lg">🏠</div>
 <div>
 <p className="font-semibold text-sm lg:text-sm text-[#0E1B16]">100K+</p>
-<p className="text-xs lg:text-xs text-gray-500">Homes Designed</p>
+<p className="text-xs lg:text-xs text-[#C8A15A]">Homes Designed</p>
 </div>
 </div>
 
-<div className="flex items-center gap-2 lg:gap-1">
+<div className="flex items-center justify-center gap-2 lg:gap-1 w-full -ml-3 lg:ml-0">
 <div className="text-x1 lg:text-lg">👥</div>
 <div>
 <p className="font-semibold text-sm lg:text-sm text-[#0E1B16]">Trusted by</p>
-<p className="text-xs lg:text-xs text-gray-500">Homeowners</p>
+<p className="text-xs lg:text-xs text-[#C8A15A]">Homeowners</p>
 </div>
 </div>
 
@@ -169,18 +169,18 @@ maskImage:
 }}
 >
     </div>
-<div className="relative overflow-hidden rounded-x1">
+<div className="relative overflow-hidden rounded-x1 mt-16">
 
 <Image
-src="/images/hero-house-1.JPEG"
+src="/images/hero-house-1.png"
 alt="Luxury Home"
-width={900}
-height={900}
+width={1600}
+height={1200}
 priority
-className="w-full h-auto object-cover"
+className="w-[132%] h-auto max-w-none object-cover translate-x-[-20%]"
 />
 <div
-className="absolute inset-y-0 left-0 w-28 md:w-72 pointer-events-none"
+className="absolute inset-y-0 left-0 w-0 md:w-0 pointer-events-none"
 style={{
 background:
 "linear-gradient(to right, #F8F6F2 0%, rgba(248,246,242,0.95) 20%, rgba(248,246,242,0.65) 45%, rgba(248,246,242,0) 100%)",
@@ -299,7 +299,7 @@ rooms, and see full cost estimation.
 </div>
 </div>
 </section>
-<section className="mt-10 bg-[#23332D] px-0 lg:px-0 py-16">
+<section className="mt-10 bg-[#23332D] px-0 lg:px-0 py-6 lg:py-8">
 
 <div className="max-w-7xl mx-auto px-8 lg:px-12 grid lg:grid-cols-2 gap-12 items-center">
 
@@ -309,18 +309,18 @@ rooms, and see full cost estimation.
 EXPLORE YOUR FUTURE HOME
 </p>
 
-<h2 className="mt-4 text-white text-5xl font-bold leading-tight">
+<h2 className="mt-4 text-white text-[46px] lg:text-5x1 font-bold leading-tight">
 Everything you need,
 <br />
 all in one place
 </h2>
-<div className="mt-10 flex gap-2">
+<div className="mt-8 lg:mt-10 grid grid-cols-2 gap-4 lg:flex lg:gap-2">
 {/* Card 1 */}
-<div className="w-[82px] h-[92px] border border-[#31453F] rounded-xl flex flex-col items-center justify-center text-center hover:border-[#B7832F] transition">
+<div className="w-full max-w-[150px] h-[120px] lg:w-[82px] lg:h-[92px] border border-[#31453F] rounded-xl flex flex-col items-center justify-center text-center hover:border-[#B7832F] transition">
 <img
 src="/images/icons/3d-walkthrough.png"
 alt="3D Walkthrough"
-className="w-14 h-14 mb-0 object-contain"
+className="w-16 h-16 lg:w-14 lg:h-14 mb-0 object-contain"
 />
 <h4 className="text-white text-[9px] leading-[11px] font-medium px-1">
 3D Walkthrough
@@ -328,11 +328,11 @@ className="w-14 h-14 mb-0 object-contain"
 </div>
 
 {/* Card 2 */}
-<div className="w-[82px] h-[92px] border border-[#31453F] rounded-xl flex flex-col items-center justify-center text-center hover:border-[#B7832F] transition">
+<div className="w-full max-w-[150px] h-[120px] lg:w-[82px] lg:h-[92px] border border-[#31453F] rounded-xl flex flex-col items-center justify-center text-center hover:border-[#B7832F] transition">
 <img
 src="images/icons/interior-design.png"
 alt="Interior Design"
-className="w-14 h-14 mb-0 object-contain"
+className="w-16 h-16 lg:w-14 lg:h-14 mb-0 object-contain"
 />
 <h4 className="text-white text-[9px] leading-[11px] font-medium px-1">
 Interior & Exterior Design
@@ -340,11 +340,11 @@ Interior & Exterior Design
 </div>
 
 {/* Card 3 */}
-<div className="w-[82px] h-[92px] border border-[#31453F] rounded-xl flex flex-col items-center justify-center text-center hover:border-[#B7832F] transition">
+<div className="w-full max-w-[150px] h-[120px] lg:w-[82px] lg:h-[92px] border border-[#31453F] rounded-xl flex flex-col items-center justify-center text-center hover:border-[#B7832F] transition">
 <img
 src="images/icons/material-finish.png"
 alt="Material & Finish"
-className="w-14 h-14 mb-0 object-contain"
+className="w-16 h-16 lg:w-14 lg:h-14 mb-0 object-contain"
 />
 <h4 className="text-white text-[9px] leading-[11px] font-medium px-1">
 Material & Finish Selection
@@ -352,11 +352,11 @@ Material & Finish Selection
 </div>
 
 {/* Card 4 */}
-<div className="w-[82px] h-[92px] border border-[#31453F] rounded-xl flex flex-col items-center justify-center text-center hover:border-[#B7832F] transition">
+<div className="w-full max-w-[150px] h-[120px] lg:w-[82px] lg:h-[92px] border border-[#31453F] rounded-xl flex flex-col items-center justify-center text-center hover:border-[#B7832F] transition">
 <img
 src="images/icons/cost-estimation.png"
 alt="Cost Estimation"
-className="w-14 h-14 mb-0 object-contain"
+className="w-16 h-16 lg:w-14 lg:h-14 mb-0 object-contain"
 />
 <h4 className="text-white text-[9px] leading-[11px] font-medium px-1">
 Accurate Cost Estimation
@@ -364,11 +364,11 @@ Accurate Cost Estimation
 </div>
 
 {/* Card 5 */}
-<div className="w-[82px] h-[92px] border border-[#31453F] rounded-xl flex flex-col items-center justify-center text-center hover:border-[#B7832F] transition">
+<div className="w-full max-w-[150px] h-[120px] lg:w-[82px] lg:h-[92px] border border-[#31453F] rounded-xl flex flex-col items-center justify-center text-center hover:border-[#B7832F] transition">
 <img
 src="images/icons/room-customization.png"
 alt="Room Customization"
-className="w-14 h-14 mb-0 object-contain"
+className="w-16 h-16 lg:w-14 lg:h-14 mb-0 object-contain"
 />
 <h4 className="text-white text-[9px] leading-[11px] font-medium px-1">
 Room-by-Room Customization
@@ -376,11 +376,11 @@ Room-by-Room Customization
 </div>
 
 {/* Card 6 */}
-<div className="w-[82px] h-[92px] border border-[#31453F] rounded-xl flex flex-col items-center justify-center text-center hover:border-[#B7832F] transition">
+<div className="w-full max-w-[150px] h-[120px] lg:w-[82px] lg:h-[92px] border border-[#31453F] rounded-xl flex flex-col items-center justify-center text-center hover:border-[#B7832F] transition">
 <img
 src="images/icons/save-share.png"
 alt="Save & Share"
-className="w-14 h-14 mb-0 object-contain"
+className="w-16 h-16 lg:w-14 lg:h-14 mb-0 object-contain"
 />
 <h4 className="text-white text-[9px] leading-[11px] font-medium px-1">
 Save & Share Your Project
@@ -389,11 +389,11 @@ Save & Share Your Project
 </div>
 </div>
 <div>
-<div className="flex justify-center items-center">
+<div className="flex justify-center items-center mt-10">
 <img
 src="/images/dashboard-showcase.png"
 alt="Vdory Dashboard"
-className="w-full max-w-[720px] object-contain"
+className="w-full max-w-[320px] lg:max-w-[720px] mx-auto object-contain"
 />
 </div>
 </div>
