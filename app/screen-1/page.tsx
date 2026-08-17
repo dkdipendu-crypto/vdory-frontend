@@ -55,7 +55,7 @@ const [state, setState] = useState("");
 const [city, setCity] = useState("");
 const [test, setTest] = useState(false);
 const [propertyType, setPropertyType] = useState("");
-const [plotShape, setPlotShape] = useState("rectangle");
+const [plotShape, setPlotShape] = useState("square");
 
 const [plotLength, setPlotLength] = useState("");
 const [plotWidth, setPlotWidth] = useState("");
@@ -791,7 +791,7 @@ plotShape === "u-shape"
 : "border-[#cbd5e1] bg-white"
 }`}
 >
-{plotShape === "t-shape" && (
+{plotShape === "u-shape" && (
 <span className="block h-full w-full rounded-full border-[3px] border-white" />
 )}
 </span>
@@ -963,22 +963,41 @@ className="h-10 w-full rounded-lg border border-[#d9dee7] bg-white px-3 text-[12
 </div>
 
 {/* Square diagram */}
-<div className="hidden border-l border-[#e5e7eb] pl-5 md:flex md:items-center md:justify-center">
-<div className="relative flex h-[110px] w-[140px] items-center justify-center">
+<div className="hidden border-1 border-[#e5e7eb] p-5 md:flex md:items-center md:justify-center">
+<div className="relative flex h-[130px] w-[150px] items-center justify-center">
 
+{/* Square */}
 <div className="h-[70px] w-[70px] border border-[#334155] bg-[#fff5e3]" />
 
-<span className="absolute top-0 text-[10px] font-medium text-[#334155]">
+{/* Overall Width - Top */}
+<div className="absolute left-1/2 top-[-34px] flex w-[70px] -translate-x-1/2 flex-col items-center">
+<span className="mb-1 whitespace-nowrap text-[11px] font-medium text-[#334155]">
 Side
 </span>
 
-<span className="absolute right-[-2px] top-1/2 translate-x-full -translate-y-1/2 text-[10px] font-medium text-[#334155]">
+<div className="relative w-full border-t border-[#64748b]">
+<span className="absolute left-0 top-[-5px] h-[10px] border-l border-[#64748b]" />
+<span className="absolute right-0 top-[-5px] h-[10px] border-r border-[#64748b]" />
+</div>
+</div>
+
+{/* Overall Depth - Left */}
+<div className="absolute left-[-38px] top-1/2 flex h-[70px] -translate-y-1/2 items-center">
+<div className="relative h-full border-l border-[#64748b]">
+<span className="absolute left-[-5px] top-0 h-[10px] border-t border-[#64748b]" />
+<span className="absolute bottom-0 left-[-5px] h-[10px] border-b border-[#64748b]" />
+</div>
+
+<span
+className="ml-2 whitespace-nowrap text-[11px] font-medium text-[#334155]"
+style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
+>
 Side
 </span>
+</div>
 
 </div>
 </div>
-
 </div>
 )}
 
@@ -986,7 +1005,7 @@ Side
 L-SHAPE
 =================================================== */}
 
-{plotShape === "l-shape" && (
+{plotShape === "L-shape" && (
 <div>
 <p className="mb-3 text-[12px] font-semibold text-[#10284c] sm:text-[13px]">
 L-Shape
@@ -1053,11 +1072,11 @@ U-SHAPE
 U-Shape
 </p>
 
-<div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+<div className="grid grid-cols-2 gap-2 sm:grid-cols-[1fr_1fr_1fr_1fr_280px] sm:gap-2 items-start">
 
 <div>
 <label className="mb-1.5 block text-[10px] font-medium text-[#334155] sm:text-[11px]">
-Top Width (ft)
+Overall Width (ft)
 </label>
 
 <input
@@ -1066,13 +1085,13 @@ min="1"
 value={plotTopWidth}
 onChange={(e) => setPlotTopWidth(e.target.value)}
 placeholder="e.g., 30"
-className="h-10 w-full rounded-lg border border-[#d9dee7] px-3 text-[12px] outline-none focus:border-[#10284c] sm:h-11 sm:text-[13px]"
+className="h-10 w-[140px] sm:w-[160px] rounded-lg border border-[#d9dee7] px-3 text-[12px] outline-none focus:border-[#10284c] sm:h-11 sm:text-[13px]"
 />
 </div>
 
 <div>
 <label className="mb-1.5 block text-[10px] font-medium text-[#334155] sm:text-[11px]">
-Bottom Width (ft)
+Opening Width (ft)
 </label>
 
 <input
@@ -1081,13 +1100,13 @@ min="1"
 value={plotBottomWidth}
 onChange={(e) => setPlotBottomWidth(e.target.value)}
 placeholder="e.g., 20"
-className="h-10 w-full rounded-lg border border-[#d9dee7] px-3 text-[12px] outline-none focus:border-[#10284c] sm:h-11 sm:text-[13px]"
+className="h-10 w-[140px] sm:w-[160px] rounded-lg border border-[#d9dee7] px-3 text-[12px] outline-none focus:border-[#10284c] sm:h-11 sm:text-[13px]"
 />
 </div>
 
 <div>
 <label className="mb-1.5 block text-[10px] font-medium text-[#334155] sm:text-[11px]">
-Depth (ft)
+Overall Depth (ft)
 </label>
 
 <input
@@ -1096,13 +1115,13 @@ min="1"
 value={plotDepth}
 onChange={(e) => setPlotDepth(e.target.value)}
 placeholder="e.g., 40"
-className="h-10 w-full rounded-lg border border-[#d9dee7] px-3 text-[12px] outline-none focus:border-[#10284c] sm:h-11 sm:text-[13px]"
+className="h-10 w-[140px] sm:w-[160px] rounded-lg border border-[#d9dee7] px-3 text-[12px] outline-none focus:border-[#10284c] sm:h-11 sm:text-[13px]"
 />
 </div>
 
 <div>
 <label className="mb-1.5 block text-[10px] font-medium text-[#334155] sm:text-[11px]">
-Stem Width (ft)
+Side Leg Width (ft)
 </label>
 
 <input
@@ -1111,10 +1130,131 @@ min="1"
 value={plotStemWidth}
 onChange={(e) => setPlotStemWidth(e.target.value)}
 placeholder="e.g., 12"
-className="h-10 w-full rounded-lg border border-[#d9dee7] px-3 text-[12px] outline-none focus:border-[#10284c] sm:h-11 sm:text-[13px]"
+className="h-10 w-[140px] sm:w-[160px] rounded-lg border border-[#d9dee7] px-3 text-[12px] outline-none focus:border-[#10284c] sm:h-11 sm:text-[13px]"
 />
 </div>
+<div className="mt-[-24px] rounded-xl border border-[#e1e5eb] bg-[#fafafa] p-2 sm:p-3">
 
+<div className="flex justify-center">
+<svg
+viewBox="0 0 420 230"
+className="h-auto w-full max-w-[280px]"
+fill="none"
+>
+{/* U-shaped plot */}
+<path
+d="M70 45 H350 V185 H250 V105 H170 V185 H70 Z"
+stroke="#10284c"
+strokeWidth="3"
+strokeLinejoin="round"
+/>
+
+{/* Overall Width */}
+<line x1="70" y1="25" x2="350" y2="25" stroke="#64748b" strokeWidth="1.5" />
+<line x1="70" y1="20" x2="70" y2="32" stroke="#64748b" strokeWidth="1.5" />
+<line x1="350" y1="20" x2="350" y2="32" stroke="#64748b" strokeWidth="1.5" />
+<text
+x="210"
+y="18"
+textAnchor="middle"
+fontSize="13"
+fill="#334155"
+>
+Overall Width
+</text>
+
+{/* Overall Depth */}
+<line x1="45" y1="45" x2="45" y2="185" stroke="#64748b" strokeWidth="1.5" />
+<line x1="39" y1="45" x2="51" y2="45" stroke="#64748b" strokeWidth="1.5" />
+<line x1="39" y1="185" x2="51" y2="185" stroke="#64748b" strokeWidth="1.5" />
+<text
+x="25"
+y="120"
+textAnchor="middle"
+fontSize="13"
+fill="#334155"
+transform="rotate(-90 25 120)"
+>
+Overall Depth
+</text>
+
+{/* Opening Width */}
+<line
+x1="170"
+y1="94"
+x2="250"
+y2="94"
+stroke="#64748b"
+strokeWidth="1.5"
+/>
+
+<line
+x1="170"
+y1="88"
+x2="170"
+y2="100"
+stroke="#64748b"
+strokeWidth="1.5"
+/>
+
+<line
+x1="250"
+y1="88"
+x2="250"
+y2="100"
+stroke="#64748b"
+strokeWidth="1.5"
+/>
+
+<text
+x="210"
+y="84"
+textAnchor="middle"
+fontSize="13"
+fill="#334155"
+>
+Opening Width
+</text>
+{/* Side Leg Width */}
+<line
+x1="70"
+y1="200"
+x2="170"
+y2="200"
+stroke="#64748b"
+strokeWidth="1.5"
+/>
+
+<line
+x1="70"
+y1="195"
+x2="70"
+y2="205"
+stroke="#64748b"
+strokeWidth="1.5"
+/>
+
+<line
+x1="170"
+y1="195"
+x2="170"
+y2="205"
+stroke="#64748b"
+strokeWidth="1.5"
+/>
+
+<text
+x="120"
+y="218"
+textAnchor="middle"
+fontSize="13"
+fill="#334155"
+>
+Side Leg Width
+</text>
+</svg>
+</div>
+</div>
 </div>
 </div>
 )}
