@@ -1044,13 +1044,13 @@ className="h-10 w-full rounded-lg border border-[#d9dee7] px-3 text-[12px] outli
 )}
 
 {/* ===================================================
-T-SHAPE
+U-SHAPE
 =================================================== */}
 
-{plotShape === "t-shape" && (
+{plotShape === "u-shape" && (
 <div>
 <p className="mb-3 text-[12px] font-semibold text-[#10284c] sm:text-[13px]">
-T-Shape
+U-Shape
 </p>
 
 <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -1112,60 +1112,6 @@ value={plotStemWidth}
 onChange={(e) => setPlotStemWidth(e.target.value)}
 placeholder="e.g., 12"
 className="h-10 w-full rounded-lg border border-[#d9dee7] px-3 text-[12px] outline-none focus:border-[#10284c] sm:h-11 sm:text-[13px]"
-/>
-</div>
-
-</div>
-</div>
-)}
-
-{/* ===================================================
-IRREGULAR
-=================================================== */}
-
-{plotShape === "irregular" && (
-<div>
-<p className="mb-3 text-[12px] font-semibold text-[#10284c] sm:text-[13px]">
-Irregular Plot
-</p>
-
-<div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-
-<div className="rounded-xl border border-dashed border-[#cbd5e1] bg-[#f8fafc] p-4 text-center">
-<svg
-viewBox="0 0 24 24"
-className="mx-auto mb-2 h-7 w-7 text-[#64748b]"
-fill="none"
-stroke="currentColor"
-strokeWidth="1.6"
->
-<path d="M5 5h14v14H5z" />
-<path d="M8 15l3-3 2 2 2-3 3 4" />
-<circle cx="9" cy="9" r="1" />
-</svg>
-
-<p className="text-[11px] font-medium text-[#334155] sm:text-[12px]">
-Upload a simple plot sketch
-</p>
-
-<p className="mt-1 text-[10px] text-[#94a3b8]">
-Upload functionality can be connected later.
-</p>
-</div>
-
-<div>
-<label className="mb-1.5 block text-[10px] font-medium text-[#334155] sm:text-[11px]">
-Or describe the plot
-</label>
-
-<textarea
-value={plotIrregularDescription}
-onChange={(e) =>
-setPlotIrregularDescription(e.target.value)
-}
-placeholder="Describe the approximate plot shape or dimensions..."
-rows={4}
-className="w-full resize-none rounded-xl border border-[#d9dee7] bg-white px-3 py-2.5 text-[11px] text-[#26354d] outline-none transition placeholder:text-[#94a3b8] focus:border-[#10284c] focus:ring-1 focus:ring-[#10284c]/10 sm:text-[12px]"
 />
 </div>
 
