@@ -25,11 +25,11 @@ return (
 
 <div className="pb-8 text-center text-sm text-zinc-500">
 <p className="mb-1">
-Shaping Digital Reality
+Where Ideas Become Homes
 </p>
 
 <p>
-© 2026 Vdory. All rights reserved.
+© 2026 Solving Walls. All rights reserved.
 </p>
 </div>
 </footer>

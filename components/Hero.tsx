@@ -19,10 +19,10 @@ return (
 <nav className="max-w-7xl mx-auto h-20 px-6 lg:px-8 flex items-center justify-between">
 
 <Image
-src="/logo-vdory.png"
+src="/images/solving-walls.png"
 alt="Vdory"
-width={118}
-height={31}
+width={200}
+height={60}
 priority
 />
 
