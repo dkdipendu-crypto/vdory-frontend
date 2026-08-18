@@ -55,7 +55,7 @@ const [state, setState] = useState("");
 const [city, setCity] = useState("");
 const [test, setTest] = useState(false);
 const [propertyType, setPropertyType] = useState("");
-const [plotShape, setPlotShape] = useState("square");
+const [plotShape, setPlotShape] = useState("u-shape");
 
 const [plotLength, setPlotLength] = useState("");
 const [plotWidth, setPlotWidth] = useState("");
@@ -963,14 +963,14 @@ className="h-10 w-full rounded-lg border border-[#d9dee7] bg-white px-3 text-[12
 </div>
 
 {/* Square diagram */}
-<div className="hidden border-1 border-[#e5e7eb] p-5 md:flex md:items-center md:justify-center">
-<div className="relative flex h-[130px] w-[150px] items-center justify-center">
+<div className="hidden border-1 border-[#e5e7eb] pl-3 md:flex md:items-center md:justify-center">
+<div className="relative flex h-[110px] w-[145px] items-center justify-center">
 
 {/* Square */}
-<div className="h-[70px] w-[70px] border border-[#334155] bg-[#fff5e3]" />
+<div className="h-[70px] w-[70px] translate-y-[8px] border border-[#334155] bg-[#fff5e3]" />
 
 {/* Overall Width - Top */}
-<div className="absolute left-1/2 top-[-34px] flex w-[70px] -translate-x-1/2 flex-col items-center">
+<div className="absolute left-1/2 top-[-0px] flex w-[70px] -translate-x-1/2 flex-col items-center">
 <span className="mb-1 whitespace-nowrap text-[11px] font-medium text-[#334155]">
 Side
 </span>
@@ -982,14 +982,14 @@ Side
 </div>
 
 {/* Overall Depth - Left */}
-<div className="absolute left-[-38px] top-1/2 flex h-[70px] -translate-y-1/2 items-center">
+<div className="absolute left-[28px] top-[58%] flex h-[70px] -translate-y-1/2 items-center">
 <div className="relative h-full border-l border-[#64748b]">
-<span className="absolute left-[-5px] top-0 h-[10px] border-t border-[#64748b]" />
-<span className="absolute bottom-0 left-[-5px] h-[10px] border-b border-[#64748b]" />
+<span className="absolute left-[-5px] top-0 w-[10px] border-t border-[#64748b]" />
+<span className="absolute left-[-5px] bottom-0 w-[10px] border-b border-[#64748b]" />
 </div>
 
 <span
-className="ml-2 whitespace-nowrap text-[11px] font-medium text-[#334155]"
+className="absolute right-full mr-1 whitespace-nowrap text-[11px] font-medium text-[#334155]"
 style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
 >
 Side
@@ -1005,7 +1005,7 @@ Side
 L-SHAPE
 =================================================== */}
 
-{plotShape === "L-shape" && (
+{plotShape === "l-shape" && (
 <div>
 <p className="mb-3 text-[12px] font-semibold text-[#10284c] sm:text-[13px]">
 L-Shape
@@ -1133,7 +1133,7 @@ placeholder="e.g., 12"
 className="h-10 w-[140px] sm:w-[160px] rounded-lg border border-[#d9dee7] px-3 text-[12px] outline-none focus:border-[#10284c] sm:h-11 sm:text-[13px]"
 />
 </div>
-<div className="mt-[-24px] rounded-xl border border-[#e1e5eb] bg-[#fafafa] p-2 sm:p-3">
+<div className="mt-2 rounded-xl border border-[#e1e5eb] bg-[#fafafa] p-2 sm:mt-[-24px] sm:p-3">
 
 <div className="flex justify-center">
 <svg
