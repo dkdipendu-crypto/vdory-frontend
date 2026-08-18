@@ -7,7 +7,7 @@ const desktopSteps = [
 "Spaces & Requirements",
 "Design Preferences",
 "Materials & Quality",
-"Budget & Timeline",
+"Layout Preview",
 ];
 
 const mobileSteps = [
@@ -15,7 +15,7 @@ const mobileSteps = [
 "Spaces",
 "Design",
 "Materials",
-"Budget",
+"Layout",
 ];
 
 const locationData: Record<string, string[]> = {
@@ -64,7 +64,7 @@ const [plotDepth, setPlotDepth] = useState("");
 const [plotTopWidth, setPlotTopWidth] = useState("");
 const [plotBottomWidth, setPlotBottomWidth] = useState("");
 const [plotStemWidth, setPlotStemWidth] = useState("");
-const [plotIrregularDescription, setPlotIrregularDescription] = useState("");
+
 const [floorCount, setFloorCount] = useState("");
 const [builtUpArea, setBuiltUpArea] = useState("");
 const [showProfile, setShowProfile] = useState(false);
@@ -83,7 +83,8 @@ plotDepth,
 plotTopWidth,
 plotBottomWidth,
 plotStemWidth,
-plotIrregularDescription,
+floorCount,
+builtUpArea,
 };
 
 localStorage.setItem(
@@ -425,9 +426,9 @@ HEADER
 <div className="flex w-[300px] shrink-0 items-center">
 <div className="flex items-center gap-3">
 <img
-src="/images/solving-walls.png"
+src="/images/s-walls.png"
 alt="Solving Walls"
-className="h-18 w-auto object-contain"
+className="h-13 w-auto object-contain"
 />
 
 </div>
@@ -448,7 +449,7 @@ className="flex min-w-0 flex-1 items-start"
 
 <div className="flex min-w-[44px] flex-col items-center">
 <div
-className={`flex h-9 w-9 items-center justify-center rounded-full border text-sm font-semibold ${
+className={`flex h-8 w-8 items-center justify-center rounded-full border text-[13px] font-semibold ${
 active
 ? "border-[#10284c] bg-[#10284c] text-white"
 : "border-[#d7dce3] bg-white text-[#26344b]"
@@ -458,7 +459,7 @@ active
 </div>
 
 <div
-className={`mt-2 max-w-[110px] text-center text-[12px] font-medium leading-[15px] ${
+className={`mt-2 max-w-[160px] whitespace-nowrap text-center text-[11px] font-medium leading-[15px] ${
 active
 ? "text-[#10284c]"
 : "text-[#26344b]"
@@ -470,7 +471,7 @@ active
 
 {index < desktopSteps.length - 1 && (
 <div
-className={`mt-[17px] h-[2px] flex-1 ${
+className={`mt-[15px] h-[2px] w-[80px] shrink-0 ${
 index === 0
 ? "bg-[#d9a52b]"
 : "bg-[#dfe3e8]"
@@ -514,7 +515,7 @@ className="flex h-11 w-11 items-center justify-center rounded-xl border border-[
 {/* Centered Brand */}
 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
 <img
-src="/images/solving-walls.png"
+src="/images/s-walls.png"
 alt="Solving Walls"
 className="h-14 w-auto object-contain"
 />
@@ -1860,7 +1861,7 @@ saveScreen1();
 // Screen 2 will be connected here
 // once Screen 2 is implemented.
 }}
-className="ml-auto inline-flex items-center justify-center gap-3 rounded-xl bg-[#10284c] px-6 py-3 text-[14px] font-semibold text-white shadow-sm transition hover:bg-[#0c203d] lg:min-w-[220px]"
+className="w-full lg:w-auto ml-auto inline-flex items-center justify-center gap-3 rounded-xl bg-[#10284c] px-6 py-3 text-[14px] font-semibold text-white shadow-sm transition hover:bg-[#0c203d] lg:min-w-[220px]"
 >
 Continue to Next Step
 
