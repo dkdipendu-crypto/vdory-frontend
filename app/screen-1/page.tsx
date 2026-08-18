@@ -506,7 +506,7 @@ type="button"
 aria-label="Go back"
 className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#e1e5eb] bg-white text-[#10284c] shadow-sm"
 >
-<span className="relative -left-[1px] text-[27px] leading-none">
+<span className="relative left-0 -top-[2px] text-[27px] leading-none">
 ‹
 </span>
 </button>
@@ -520,13 +520,14 @@ className="h-14 w-auto object-contain"
 />
 </div>
 
-{/* Help */}
+{/* Profile */}
 <button
 type="button"
-aria-label="Help"
-className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#e1e5eb] bg-white text-[20px] font-semibold text-[#10284c] shadow-sm"
+aria-label="Profile"
+onClick={() => setShowProfile(true)}
+className="relative -top-0.5 flex h-11 w-11 items-center justify-center rounded-full border border-[#e1e5eb] bg-white text-[#10284c] shadow-sm transition hover:border-[#d9a52b] hover:text-[#d9a52b]"
 >
-?
+<span className="text-lg">👤</span>
 </button>
 </div>
 
