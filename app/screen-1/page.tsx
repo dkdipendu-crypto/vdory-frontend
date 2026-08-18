@@ -55,7 +55,7 @@ const [state, setState] = useState("");
 const [city, setCity] = useState("");
 const [test, setTest] = useState(false);
 const [propertyType, setPropertyType] = useState("");
-const [plotShape, setPlotShape] = useState("u-shape");
+const [plotShape, setPlotShape] = useState("rectangle");
 
 const [plotLength, setPlotLength] = useState("");
 const [plotWidth, setPlotWidth] = useState("");
@@ -68,6 +68,7 @@ const [plotIrregularDescription, setPlotIrregularDescription] = useState("");
 const [floorCount, setFloorCount] = useState("");
 const [builtUpArea, setBuiltUpArea] = useState("");
 const [showProfile, setShowProfile] = useState(false);
+const [showAccountSettings, setShowAccountSettings] = useState(false);
 
 const saveScreen1 = () => {
 const screen1Data = {
@@ -93,26 +94,321 @@ JSON.stringify(screen1Data)
 
 return (
 <main className="min-h-screen bg-[#f8fafc] text-[#10284c]">
-    {showProfile && (
-<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 px-4">
-<div className="w-full max-w-sm rounded-2xl bg-white p-6 shadow-xl">
-<div className="flex items-center justify-between">
-<h2 className="text-lg font-semibold text-[#10284c]">
+{showProfile && (
+<div
+className="fixed inset-0 z-50 flex items-center justify-center bg-black/35 px-4 backdrop-blur-[2px]"
+onClick={() => {
+setShowProfile(false);
+setShowAccountSettings(false);
+}}
+>
+<div
+className="w-full max-w-[390px] overflow-hidden rounded-[24px] border border-[#e5e7eb] bg-white shadow-[0_20px_60px_rgba(16,40,76,0.18)]"
+onClick={(e) => e.stopPropagation()}
+>
+{!showAccountSettings ? (
+<>
+{/* ================= PROFILE HEADER ================= */}
+<div className="border-b border-[#edf0f4] px-6 pb-5 pt-6">
+<div className="flex items-start justify-between">
+<div>
+<p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-[#b4872c]">
+Account
+</p>
+
+<h2 className="mt-1 text-[22px] font-bold tracking-[-0.3px] text-[#10284c]">
 Profile
 </h2>
+</div>
 
 <button
 type="button"
-onClick={() => setShowProfile(false)}
-className="text-xl text-[#64748b] hover:text-[#10284c]"
+aria-label="Close profile"
+onClick={() => {
+setShowProfile(false);
+setShowAccountSettings(false);
+}}
+className="flex h-9 w-9 items-center justify-center rounded-full bg-[#f6f8fa] text-[20px] leading-none text-[#64748b] transition hover:bg-[#eef1f5] hover:text-[#10284c]"
 >
 ×
 </button>
 </div>
 
-<div className="mt-5 text-sm text-[#64748b]">
-<p>Your profile details will appear here.</p>
+{/* ================= AVATAR + USER INFO ================= */}
+<div className="mt-5 flex items-center gap-4">
+<div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#fff4df] text-[#b4872c] ring-1 ring-[#ead8b2]">
+<svg
+viewBox="0 0 24 24"
+className="h-7 w-7"
+fill="none"
+stroke="currentColor"
+strokeWidth="1.7"
+strokeLinecap="round"
+strokeLinejoin="round"
+>
+<circle cx="12" cy="8" r="3.5" />
+<path d="M5.5 20c.8-3.4 3.1-5.2 6.5-5.2s5.7 1.8 6.5 5.2" />
+</svg>
 </div>
+
+<div className="min-w-0">
+<p className="truncate text-[16px] font-semibold text-[#10284c]">
+Your Name
+</p>
+
+<p className="mt-0.5 truncate text-[12px] text-[#64748b]">
+your@email.com
+</p>
+</div>
+</div>
+</div>
+
+{/* ================= PROFILE OPTIONS ================= */}
+<div className="px-4 py-4">
+
+{/* MY PROJECTS */}
+<button
+type="button"
+className="group flex w-full items-center gap-3 rounded-[16px] px-3 py-3.5 text-left transition hover:bg-[#f8fafc]"
+>
+<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#f4f6f9] text-[#10284c]">
+<svg
+viewBox="0 0 24 24"
+className="h-[19px] w-[19px]"
+fill="none"
+stroke="currentColor"
+strokeWidth="1.7"
+strokeLinecap="round"
+strokeLinejoin="round"
+>
+<path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h4l2 2h5A2.5 2.5 0 0 1 20 8.5v9A2.5 2.5 0 0 1 17.5 20h-11A2.5 2.5 0 0 1 4 17.5v-11Z" />
+</svg>
+</div>
+
+<div className="min-w-0 flex-1">
+<p className="text-[13px] font-semibold text-[#10284c]">
+My Projects
+</p>
+<p className="mt-0.5 text-[11px] text-[#7b8798]">
+View your saved home projects
+</p>
+</div>
+
+<svg
+viewBox="0 0 24 24"
+className="h-4 w-4 text-[#94a3b8] transition group-hover:translate-x-0.5 group-hover:text-[#10284c]"
+fill="none"
+stroke="currentColor"
+strokeWidth="1.8"
+strokeLinecap="round"
+strokeLinejoin="round"
+>
+<path d="m9 18 6-6-6-6" />
+</svg>
+</button>
+
+{/* ACCOUNT SETTINGS */}
+<button
+type="button"
+onClick={() => setShowAccountSettings(true)}
+className="group mt-1 flex w-full items-center gap-3 rounded-[16px] px-3 py-3.5 text-left transition hover:bg-[#f8fafc]"
+>
+<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#f4f6f9] text-[#10284c]">
+<svg
+viewBox="0 0 24 24"
+className="h-[19px] w-[19px]"
+fill="none"
+stroke="currentColor"
+strokeWidth="1.7"
+strokeLinecap="round"
+strokeLinejoin="round"
+>
+<circle cx="12" cy="12" r="3" />
+<path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-1.7 1.7-.06-.06a1.7 1.7 0 0 0-1.88-.34 1.7 1.7 0 0 0-1.03 1.56V20h-2.4v-.2a1.7 1.7 0 0 0-1.03-1.56 1.7 1.7 0 0 0-1.88.34l-.06.06-1.7-1.7.06-.06A1.7 1.7 0 0 0 8.4 15a1.7 1.7 0 0 0-1.56-1.03H6v-2.4h.2A1.7 1.7 0 0 0 7.76 10a1.7 1.7 0 0 0-.34-1.88l-.06-.06 1.7-1.7.06.06A1.7 1.7 0 0 0 11 6.1 1.7 1.7 0 0 0 12.03 4.5V4h2.4v.2A1.7 1.7 0 0 0 15.46 5.76a1.7 1.7 0 0 0 1.88-.34l.06-.06 1.7 1.7-.06.06A1.7 1.7 0 0 0 18.7 9a1.7 1.7 0 0 0 1.56 1.03h.2v2.4h-.2A1.7 1.7 0 0 0 19.4 15Z" />
+</svg>
+</div>
+
+<div className="min-w-0 flex-1">
+<p className="text-[13px] font-semibold text-[#10284c]">
+Account Settings
+</p>
+<p className="mt-0.5 text-[11px] text-[#7b8798]">
+Change your account details
+</p>
+</div>
+
+<svg
+viewBox="0 0 24 24"
+className="h-4 w-4 text-[#94a3b8] transition group-hover:translate-x-0.5 group-hover:text-[#10284c]"
+fill="none"
+stroke="currentColor"
+strokeWidth="1.8"
+strokeLinecap="round"
+strokeLinejoin="round"
+>
+<path d="m9 18 6-6-6-6" />
+</svg>
+</button>
+
+{/* DIVIDER */}
+<div className="my-3 border-t border-[#edf0f4]" />
+
+{/* SIGN OUT */}
+<button
+type="button"
+className="flex w-full items-center gap-3 rounded-[16px] px-3 py-3.5 text-left transition hover:bg-[#fff7f7]"
+>
+<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#fff1f1] text-[#b42318]">
+<svg
+viewBox="0 0 24 24"
+className="h-[19px] w-[19px]"
+fill="none"
+stroke="currentColor"
+strokeWidth="1.8"
+strokeLinecap="round"
+strokeLinejoin="round"
+>
+<path d="M10 5H6.5A2.5 2.5 0 0 0 4 7.5v9A2.5 2.5 0 0 0 6.5 19H10" />
+<path d="M14 8l4 4-4 4" />
+<path d="M18 12H9" />
+</svg>
+</div>
+
+<div>
+<p className="text-[13px] font-semibold text-[#b42318]">
+Sign Out
+</p>
+<p className="mt-0.5 text-[11px] text-[#9a6b68]">
+Sign out of your Solving Walls account
+</p>
+</div>
+</button>
+</div>
+</>
+) : (
+<>
+{/* ================= ACCOUNT SETTINGS ================= */}
+<div className="border-b border-[#edf0f4] px-6 pb-5 pt-6">
+<div className="flex items-center gap-3">
+<button
+type="button"
+aria-label="Back to profile"
+onClick={() => setShowAccountSettings(false)}
+className="flex h-9 w-9 items-center justify-center rounded-full bg-[#f6f8fa] text-[#64748b] transition hover:bg-[#eef1f5] hover:text-[#10284c]"
+>
+<svg
+viewBox="0 0 24 24"
+className="h-4 w-4"
+fill="none"
+stroke="currentColor"
+strokeWidth="1.8"
+strokeLinecap="round"
+strokeLinejoin="round"
+>
+<path d="m15 18-6-6 6-6" />
+</svg>
+</button>
+
+<div>
+<p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-[#b4872c]">
+Account
+</p>
+<h2 className="mt-1 text-[20px] font-bold text-[#10284c]">
+Account Settings
+</h2>
+</div>
+</div>
+</div>
+
+<div className="px-4 py-4">
+
+{/* CHANGE NAME */}
+<button
+type="button"
+className="group flex w-full items-center gap-3 rounded-[16px] px-3 py-3.5 text-left transition hover:bg-[#f8fafc]"
+>
+<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#f4f6f9] text-[#10284c]">
+<svg
+viewBox="0 0 24 24"
+className="h-[19px] w-[19px]"
+fill="none"
+stroke="currentColor"
+strokeWidth="1.7"
+strokeLinecap="round"
+strokeLinejoin="round"
+>
+<path d="M4 20h4l10.5-10.5a2.12 2.12 0 0 0-3-3L5 17v3Z" />
+<path d="m13.5 7.5 3 3" />
+</svg>
+</div>
+
+<div className="flex-1">
+<p className="text-[13px] font-semibold text-[#10284c]">
+Change Name
+</p>
+<p className="mt-0.5 text-[11px] text-[#7b8798]">
+Update the name shown on your profile
+</p>
+</div>
+
+<svg
+viewBox="0 0 24 24"
+className="h-4 w-4 text-[#94a3b8]"
+fill="none"
+stroke="currentColor"
+strokeWidth="1.8"
+strokeLinecap="round"
+strokeLinejoin="round"
+>
+<path d="m9 18 6-6-6-6" />
+</svg>
+</button>
+
+{/* CHANGE EMAIL */}
+<button
+type="button"
+className="group mt-1 flex w-full items-center gap-3 rounded-[16px] px-3 py-3.5 text-left transition hover:bg-[#f8fafc]"
+>
+<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#f4f6f9] text-[#10284c]">
+<svg
+viewBox="0 0 24 24"
+className="h-[19px] w-[19px]"
+fill="none"
+stroke="currentColor"
+strokeWidth="1.7"
+strokeLinecap="round"
+strokeLinejoin="round"
+>
+<rect x="3.5" y="5" width="17" height="14" rx="2" />
+<path d="m5 7 7 5 7-5" />
+</svg>
+</div>
+
+<div className="flex-1">
+<p className="text-[13px] font-semibold text-[#10284c]">
+Change Email ID
+</p>
+<p className="mt-0.5 text-[11px] text-[#7b8798]">
+Update the email address on your account
+</p>
+</div>
+
+<svg
+viewBox="0 0 24 24"
+className="h-4 w-4 text-[#94a3b8]"
+fill="none"
+stroke="currentColor"
+strokeWidth="1.8"
+strokeLinecap="round"
+strokeLinejoin="round"
+>
+<path d="m9 18 6-6-6-6" />
+</svg>
+</button>
+
+</div>
+</>
+)}
 </div>
 </div>
 )}
