@@ -930,50 +930,6 @@ strokeLinejoin="round"
 <path d="m9 18 6-6-6-6" />
 </svg>
 </button>
-
-{/* CHANGE PASSWORD */}
-<button
-type="button"
-className="group mt-1 flex w-full items-center gap-3 rounded-[16px] px-3 py-3.5 text-left transition hover:bg-[#f8fafc]"
->
-<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#f4f6f9] text-[#10284c]">
-<svg
-viewBox="0 0 24 24"
-className="h-[19px] w-[19px]"
-fill="none"
-stroke="currentColor"
-strokeWidth="1.7"
-strokeLinecap="round"
-strokeLinejoin="round"
->
-<rect x="5" y="10" width="14" height="10" rx="2" />
-<path d="M8 10V7a4 4 0 0 1 8 0v3" />
-<path d="M12 14v3" />
-</svg>
-</div>
-
-<div className="flex-1">
-<p className="text-[13px] font-semibold text-[#10284c]">
-Change Password
-</p>
-
-<p className="mt-0.5 text-[11px] text-[#7b8798]">
-Update your account password
-</p>
-</div>
-
-<svg
-viewBox="0 0 24 24"
-className="h-4 w-4 text-[#94a3b8]"
-fill="none"
-stroke="currentColor"
-strokeWidth="1.8"
-strokeLinecap="round"
-strokeLinejoin="round"
->
-<path d="m9 18 6-6-6-6" />
-</svg>
-</button>
 </div>
 </>
 )}
