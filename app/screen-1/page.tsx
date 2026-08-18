@@ -533,21 +533,27 @@ className="relative -top-0.5 flex h-11 w-11 items-center justify-center rounded-
 </div>
 
 {/* Mobile Progress */}
-<div className="relative left-[12px] mt-6 flex w-full items-start justify-center">
+<div className="relative mt-6 flex w-full items-start justify-center">
 {mobileSteps.map((step, index) => {
 const active = index === 0;
 
 return (
 <div
 key={step}
-className="flex min-w-0 flex-1 items-start"
+className="relative flex min-w-0 flex-1 flex-col items-center"
 >
-<div className="flex w-full items-start">
+{/* Connector */}
+{index < mobileSteps.length - 1 && (
+<div
+className={`absolute left-1/2 top-[17px] h-[2px] w-full ${
+index === 0 ? "bg-[#d9a441]" : "bg-[#d7dce3]"
+}`}
+/>
+)}
 
 {/* Circle */}
-<div className="flex min-w-[32px] flex-col items-center">
 <div
-className={`flex h-9 w-9 items-center justify-center rounded-full border text-[13px] font-semibold ${
+className={`relative z-10 flex h-9 w-9 items-center justify-center rounded-full border text-[13px] font-semibold ${
 active
 ? "border-[#10284c] bg-[#10284c] text-white"
 : "border-[#d7dce3] bg-white text-[#26344b]"
@@ -556,28 +562,13 @@ active
 {index + 1}
 </div>
 
-{/* Short mobile label */}
+{/* Mobile label */}
 <div
 className={`mt-2 w-[58px] text-center text-[9px] font-medium leading-[11px] ${
-active
-? "text-[#10284c]"
-: "text-[#26344b]"
+active ? "text-[#10284c]" : "text-[#26344b]"
 }`}
 >
 {step}
-</div>
-</div>
-
-{/* Connector */}
-{index < mobileSteps.length - 1 && (
-<div
-className={`mt-[17px] h-[2px] flex-1 ${
-index === 0
-? "bg-[#d9a52b]"
-: "bg-[#dfe3e8]"
-}`}
-/>
-)}
 </div>
 </div>
 );
