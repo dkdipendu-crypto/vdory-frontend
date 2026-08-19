@@ -1115,7 +1115,7 @@ PAGE INTRO
 ========================================================= */}
 <section className="mx-auto max-w-[1540px] px-5 pb-5 pt-6 sm:px-8 lg:px-10 lg:pb-5 lg:pt-6">
 <p className="text-[11px] font-semibold tracking-[0.8px] text-[#9a7734] sm:text-[12px]">
-STEP 2 OF 4
+STEP 2 OF 5
 </p>
 
 <h1 className="mt-1 text-[28px] font-bold leading-tight tracking-[-0.7px] text-[#10284c] sm:text-[32px] lg:text-[34px]">

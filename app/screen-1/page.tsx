@@ -496,20 +496,31 @@ className="flex shrink-0 items-center justify-center w-11 h-11 rounded-full bord
 </div>
 
 {/* ================= MOBILE HEADER ================= */}
-<div className="relative block bg-white px-4 pb-5 pt-4 lg:hidden">
+<div className="relative block bg-white px-4 pb-5 pt-5 lg:hidden">
 
 {/* Top row */}
 <div className="relative flex h-12 items-center justify-between">
 
-{/* Back */}
+{/* Home */}
 <button
 type="button"
-aria-label="Go back"
+aria-label="Go to home"
+onClick={() => window.location.href = "/"}
 className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#e1e5eb] bg-white text-[#10284c] shadow-sm"
 >
-<span className="relative left-0 -top-[2px] text-[27px] leading-none">
-‹
-</span>
+<svg
+viewBox="0 0 24 24"
+fill="none"
+stroke="#b8862c"
+strokeWidth="2"
+strokeLinecap="round"
+strokeLinejoin="round"
+className="h-6 w-6"
+>
+<path d="M3 10.5 12 3l9 7.5" />
+<path d="M5.5 9.5V21h13V9.5" />
+<path d="M9.5 21v-6h5v6" />
+</svg>
 </button>
 
 {/* Centered Brand */}
@@ -584,7 +595,7 @@ SCREEN 1 CONTENT WILL BE ADDED NEXT
 <section className="mx-auto max-w-[1540px] px-5 pb-5 pt-6 sm:px-8 lg:px-10 lg:pb-5 lg:pt-6">
 
 <p className="text-[11px] font-semibold tracking-[0.8px] text-[#9a7734] sm:text-[12px]">
-STEP 1 OF 4
+STEP 1 OF 5
 </p>
 
 <h1 className="mt-1 text-[28px] font-bold leading-tight tracking-[-0.7px] text-[#10284c] sm:text-[32px] lg:text-[34px]">
