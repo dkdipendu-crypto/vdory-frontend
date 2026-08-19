@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const desktopSteps = [
 "Project & Plot",
@@ -71,6 +71,33 @@ const [floorCount, setFloorCount] = useState("");
 const [builtUpArea, setBuiltUpArea] = useState("");
 const [showProfile, setShowProfile] = useState(false);
 const [showAccountSettings, setShowAccountSettings] = useState(false);
+
+useEffect(() => {
+try {
+const saved = localStorage.getItem("solvingWalls_screen1");
+
+if (!saved) return;
+
+const data = JSON.parse(saved);
+
+setState(data.state || "");
+setCity(data.city || "");
+setPropertyType(data.propertyType || "");
+setPlotShape(data.plotShape || "rectangle");
+setPlotLength(data.plotLength || "");
+setPlotWidth(data.plotWidth || "");
+setPlotSide(data.plotSide || "");
+setPlotDepth(data.plotDepth || "");
+setPlotTopWidth(data.plotTopWidth || "");
+setPlotBottomWidth(data.plotBottomWidth || "");
+setPlotStemWidth(data.plotStemWidth || "");
+setFloorCount(data.floorCount || "");
+setBuiltUpArea(data.builtUpArea || "");
+} catch (error) {
+console.error("Unable to restore Screen 1 data:", error);
+}
+}, []);
+
 const isScreen1Complete = () => {
 // Location
 if (!city.trim() || !state.trim()) {
@@ -1885,10 +1912,10 @@ SCREEN 1 BOTTOM ACTIONS
 ========================= */}
 <div className="mt-6 flex items-center justify-between gap-4 border-t border-[#e5e7eb] pt-5">
 
-{/* SAVE & EXIT */}
+{/* Home Page */}
 <button
 type="button"
-onClick={saveScreen1}
+onClick={() => router.push("/")}
 className="hidden lg:inline-flex items-center gap-2 rounded-xl border border-[#d9dee7] bg-white px-4 py-2.5 text-[13px] font-medium text-[#334155] transition hover:bg-[#f8fafc]"
 >
 <svg
