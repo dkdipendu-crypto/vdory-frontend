@@ -790,7 +790,7 @@ Back
 type="button"
 onClick={continueToNextStep}
 disabled={!isScreen4Complete}
-className={`ml-auto inline-flex w-full items-center justify-center gap-3 rounded-xl px-6 py-3 text-[14px] font-semibold shadow-sm transition lg:min-w-[220px] ${
+className={`inline-flex items-center justify-center gap-3 rounded-xl px-6 py-3 text-[14px] font-semibold ${
 isScreen4Complete
 ? "bg-[#10284c] text-white hover:bg-[#0c203d]"
 : "bg-[#d9dee7] text-[#8a94a6] cursor-not-allowed"
