@@ -69,6 +69,59 @@ const [floorCount, setFloorCount] = useState("");
 const [builtUpArea, setBuiltUpArea] = useState("");
 const [showProfile, setShowProfile] = useState(false);
 const [showAccountSettings, setShowAccountSettings] = useState(false);
+const isScreen1Complete = () => {
+// Location
+if (!city.trim() || !state.trim()) {
+return false;
+}
+
+// Property Type
+if (!propertyType.trim()) {
+return false;
+}
+
+// Plot Shape
+if (!plotShape) {
+return false;
+}
+
+// Plot Dimensions
+if (plotShape === "rectangle") {
+if (!plotLength || !plotWidth) {
+return false;
+}
+}
+
+if (plotShape === "square") {
+if (!plotSide) {
+return false;
+}
+}
+
+if (plotShape === "l-shape") {
+if (!plotLength || !plotWidth || !plotDepth) {
+return false;
+}
+}
+
+if (plotShape === "u-shape") {
+if (!plotLength || !plotWidth || !plotDepth) {
+return false;
+}
+}
+
+// Number of Floors
+if (!floorCount) {
+return false;
+}
+
+// Built-up Area
+if (!builtUpArea || Number(builtUpArea) <= 0) {
+return false;
+}
+
+return true;
+};
 
 const saveScreen1 = () => {
 const screen1Data = {
@@ -1857,13 +1910,20 @@ Home Page
 {/* CONTINUE */}
 <button
 type="button"
+disabled={!isScreen1Complete()}
 onClick={() => {
+if (!isScreen1Complete()) return;
+
 saveScreen1();
 
 // Screen 2 will be connected here
 // once Screen 2 is implemented.
 }}
-className="w-full lg:w-auto ml-auto inline-flex items-center justify-center gap-3 rounded-xl bg-[#10284c] px-6 py-3 text-[14px] font-semibold text-white shadow-sm transition hover:bg-[#0c203d] lg:min-w-[220px]"
+className={`w-full lg:w-auto ml-auto inline-flex items-center justify-center gap-3 rounded-xl px-6 py-3 text-[14px] font-semibold shadow-sm transition lg:min-w-[220px] ${
+isScreen1Complete()
+? "bg-[#10284c] text-white hover:bg-[#0c203d]"
+: "cursor-not-allowed bg-[#10284c]/30 text-white/80"
+}`}
 >
 Continue to Next Step
 
