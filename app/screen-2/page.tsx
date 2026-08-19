@@ -1137,6 +1137,9 @@ active
 PAGE INTRO
 ========================================================= */}
 <section className="mx-auto max-w-[1540px] px-5 pb-5 pt-6 sm:px-8 lg:px-10 lg:pb-5 lg:pt-6">
+<div className="flex items-start justify-between gap-4">
+{/* LEFT — KEEPING THE EXISTING CONTENT */}
+<div className="min-w-0">
 <p className="text-[11px] font-semibold tracking-[0.8px] text-[#9a7734] sm:text-[12px]">
 STEP 2 OF 5
 </p>
@@ -1146,9 +1149,33 @@ Spaces &amp; Requirements
 </h1>
 
 <p className="mt-1 max-w-[700px] text-[13px] leading-5 text-[#596579] sm:text-[14px]">
-Tell us about the spaces you need so we can create a layout that
-fits your requirements.
+Tell us about the spaces you need so we can create a layout that fits your requirements.
 </p>
+</div>
+
+{/* RIGHT — SPACES & REQUIREMENTS ICON — MOBILE ONLY */}
+<div className="mt-1 flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#fff5e3] text-[#b4872c] sm:h-16 sm:w-16 lg:hidden">
+<svg
+viewBox="0 0 24 24"
+fill="none"
+stroke="currentColor"
+strokeWidth="1.7"
+strokeLinecap="round"
+strokeLinejoin="round"
+className="h-9 w-9"
+>
+{/* folded map / space layout */}
+<path d="M4 6.5 9 4l6 2.5L20 4v13.5L15 20l-6-2.5L4 20V6.5Z" />
+<path d="M9 4v13.5" />
+<path d="M15 6.5V20" />
+
+{/* house / room layout */}
+<path d="M11 12.5 14 10l3 2.5" />
+<path d="M12 12v4h4v-4" />
+<path d="M13.2 16v-2h1.6v2" />
+</svg>
+</div>
+</div>
 </section>
 
 {/* =========================================================

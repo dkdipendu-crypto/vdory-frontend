@@ -662,7 +662,7 @@ active
 
 {/* Mobile label */}
 <div
-className={`mt-2 w-[58px] text-center text-[9px] font-medium leading-[11px] ${
+className={`mt-2 w-[58px] text-center text-[9.5px] font-medium leading-[11px] ${
 active ? "text-[#10284c]" : "text-[#26344b]"
 }`}
 >
@@ -680,7 +680,10 @@ SCREEN 1 CONTENT WILL BE ADDED NEXT
 ========================================================= */}
 
 <section className="mx-auto max-w-[1540px] px-5 pb-5 pt-6 sm:px-8 lg:px-10 lg:pb-5 lg:pt-6">
+<div className="flex items-start justify-between gap-4">
 
+{/* LEFT — Existing content unchanged */}
+<div className="min-w-0 flex-1">
 <p className="text-[11px] font-semibold tracking-[0.8px] text-[#9a7734] sm:text-[12px]">
 STEP 1 OF 5
 </p>
@@ -693,7 +696,28 @@ Project &amp; Plot
 Tell us about your project and plot so we can create the perfect
 design for you.
 </p>
+</div>
 
+{/* RIGHT — Mobile project/location icon */}
+<div className="mt-1 flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#fff5e3] lg:hidden">
+<svg
+viewBox="0 0 24 24"
+fill="none"
+stroke="currentColor"
+strokeWidth="1.7"
+strokeLinecap="round"
+strokeLinejoin="round"
+className="h-9 w-9 text-[#b4872c]"
+>
+<path d="M3 21h18" />
+<path d="M5 21V9l7-5 7 5v12" />
+<path d="M9 21v-6h6v6" />
+<path d="M8 10h2" />
+<path d="M14 10h2" />
+</svg>
+</div>
+
+</div>
 </section>
 
 <section className="mx-auto max-w-[1450px] px-5 pb-8 sm:px-8 lg:px-10">

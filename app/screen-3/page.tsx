@@ -945,6 +945,9 @@ PAGE INTRO
 ===================================================== */}
 
 <section className="mx-auto max-w-[1540px] px-5 pb-5 pt-6 sm:px-8 lg:px-10 lg:pb-5 lg:pt-6">
+<div className="flex items-start justify-between gap-4">
+{/* LEFT — EXISTING CONTENT, UNCHANGED */}
+<div className="min-w-0">
 <p className="text-[11px] font-semibold tracking-[0.8px] text-[#9a7734] sm:text-[12px]">
 STEP 3 OF 5
 </p>
@@ -957,6 +960,37 @@ Design Preferences
 Tell us your design style and preferences. This helps our AI create a
 design that matches your taste and lifestyle perfectly.
 </p>
+</div>
+
+{/* RIGHT — GOLDEN DESIGN PREFERENCES ICON / MOBILE ONLY */}
+<div className="mt-1 flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#fff5e3] text-[#b4872c] sm:h-16 sm:w-16 lg:hidden">
+<svg
+viewBox="0 0 32 32"
+fill="none"
+stroke="currentColor"
+strokeWidth="1.7"
+strokeLinecap="round"
+strokeLinejoin="round"
+className="h-8 w-8"
+>
+{/* Sofa */}
+<path d="M4.5 17.5V14a3 3 0 0 1 3-3h4.5a3 3 0 0 1 3 3v3.5" />
+<path d="M15 17.5V14a3 3 0 0 1 3-3h4.5a3 3 0 0 1 3 3v3.5" />
+
+<path d="M3.5 17.5h25v5h-25z" />
+<path d="M6 22.5v2" />
+<path d="M26 22.5v2" />
+
+{/* Clear gap between sofa and lamp */}
+
+{/* Floor lamp */}
+<path d="M29.5 5.5h2" />
+<path d="M29.5 5.5l-1.5 3h4.5z" />
+<path d="M31 8.5v16" />
+<path d="M27.5 24.5h5" />
+</svg>
+</div>
+</div>
 </section>
 
 {/* =====================================================

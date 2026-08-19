@@ -433,6 +433,9 @@ active
 PAGE INTRO
 ========================================================= */}
 <section className="mx-auto max-w-[1540px] px-5 pb-5 pt-6 sm:px-8 lg:px-10 lg:pb-5 lg:pt-6">
+<div className="flex items-start justify-between gap-4">
+{/* LEFT — KEEPING THE EXISTING SCREEN 4 CONTENT */}
+<div className="min-w-0">
 <p className="text-[11px] font-semibold tracking-[0.8px] text-[#9a7734] sm:text-[12px]">
 STEP 4 OF 5
 </p>
@@ -442,8 +445,19 @@ Materials &amp; Quality
 </h1>
 
 <p className="mt-1 max-w-[700px] text-[13px] leading-5 text-[#596579] sm:text-[14px]">
-Choose your preferred materials and quality level to bring your home to life.
+Choose your preferred materials, finishes and quality level to bring your home to life.
 </p>
+</div>
+
+{/* RIGHT — MATERIALS & QUALITY ICON / MOBILE ONLY */}
+<div className="mt-1 flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#fff5e3] sm:h-16 sm:w-16">
+<img
+src="/images/materials-quality.png"
+alt="Materials and quality"
+className="h-12 w-12 object-contain sm:h-14 sm:w-14"
+/>
+</div>
+</div>
 </section>
 
 {/* =========================================================
