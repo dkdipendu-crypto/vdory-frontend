@@ -305,6 +305,42 @@ const additionalSpaces = isRestaurant
 ? commercialSpaces.slice(2)
 : residentialAdditional;
 
+const isScreen2Complete =
+coreSpaces.every((item) => {
+const value = values[item.id];
+
+if (item.type === "count") {
+return Number(value ?? item.defaultValue ?? 0) >= 1;
+}
+
+if (item.type === "select") {
+return typeof value === "string" && value.trim() !== "";
+}
+
+if (item.type === "toggle") {
+return typeof value === "boolean";
+}
+
+return true;
+}) &&
+additionalSpaces.some((item) => {
+const value = values[item.id];
+
+if (item.type === "count") {
+return Number(value ?? 0) >= 1;
+}
+
+if (item.type === "select") {
+return typeof value === "string" && value.trim() !== "";
+}
+
+if (item.type === "toggle") {
+return value === true;
+}
+
+return false;
+});
+
 const updateValue = (id: string, value: any) => {
 setValues((previous) => ({
 ...previous,
@@ -1279,6 +1315,7 @@ Back
 <button
 type="button"
 onClick={continueToNextStep}
+disabled={!isScreen2Complete}
 className="inline-flex items-center justify-center gap-3 rounded-xl bg-[#10284c] px-6 py-3 text-[14px] font-semibold text-white shadow-sm transition hover:bg-[#0c203d] sm:min-w-[220px]"
 >
 Continue to Next Step
