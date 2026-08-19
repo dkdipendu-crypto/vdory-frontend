@@ -306,40 +306,27 @@ const additionalSpaces = isRestaurant
 : residentialAdditional;
 
 const isScreen2Complete =
-coreSpaces.every((item) => {
-const value = values[item.id];
-
-if (item.type === "count") {
-return Number(value ?? item.defaultValue ?? 0) >= 1;
-}
-
-if (item.type === "select") {
-return typeof value === "string" && value.trim() !== "";
-}
-
-if (item.type === "toggle") {
-return typeof value === "boolean";
-}
-
-return true;
-}) &&
-additionalSpaces.some((item) => {
-const value = values[item.id];
-
-if (item.type === "count") {
-return Number(value ?? 0) >= 1;
-}
-
-if (item.type === "select") {
-return typeof value === "string" && value.trim() !== "";
-}
-
-if (item.type === "toggle") {
-return value === true;
-}
-
-return false;
-});
+Number(values.bedrooms ?? 0) >= 1 &&
+Number(values.bathrooms ?? 0) >= 1 &&
+Number(values.livingRoom ?? 0) >= 1 &&
+Number(values.diningArea ?? 0) >= 1 &&
+typeof values.kitchen === "string" &&
+values.kitchen.trim() !== "" &&
+(
+Number(values.familyLounge ?? 0) >= 1 ||
+Number(values.studyOffice ?? 0) >= 1 ||
+values.pujaRoom === true ||
+values.utilityRoom === true ||
+values.storePantry === true ||
+Number(values.parking ?? 0) >= 1 ||
+values.garden === true ||
+values.outdoorSitting === true ||
+values.homeTheater === true ||
+values.terraceGarden === true ||
+Number(values.balconies ?? 0) >= 1 ||
+values.multiPurposeRoom === true ||
+values.multiPurposeRoom === "true"
+);
 
 const updateValue = (id: string, value: any) => {
 setValues((previous) => ({
