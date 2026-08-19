@@ -646,12 +646,18 @@ const [screen2Data, setScreen2Data] = useState<Screen2Data | null>(null);
 const [showProfile, setShowProfile] = useState(false);
 
 const [architecturalStyle, setArchitecturalStyle] = useState("");
-const [naturalLight, setNaturalLight] = useState("maximum");
-const [openPlan, setOpenPlan] = useState("open");
-const [outdoorLiving, setOutdoorLiving] = useState("large");
+const [naturalLight, setNaturalLight] = useState("");
+const [openPlan, setOpenPlan] = useState("");
+const [outdoorLiving, setOutdoorLiving] = useState("");
 const [architecturalFeatures, setArchitecturalFeatures] = useState<
 string[]
 >([]);
+
+const isScreen3Complete =
+architecturalStyle.trim() !== "" &&
+naturalLight.trim() !== "" &&
+openPlan.trim() !== "" &&
+outdoorLiving.trim() !== "";
 
 /* =========================================================
 LOAD PREVIOUS DATA
@@ -1240,14 +1246,43 @@ strokeLinejoin="round"
 
 {/* ================= BOTTOM ACTIONS ================= */}
 
-<div className="mt-2 flex items-center justify-between gap-4 border-t border-[#e5e7eb] pt-5">
+<div className="mt-6 flex flex-col-reverse gap-3 border-t border-[#e5e7eb] pt-5 sm:flex-row sm:items-center sm:justify-between">
+<button
+type="button"
+onClick={goBack}
+className="hidden lg:inline-flex items-center justify-center gap-2 rounded-xl border border-[#d9dee7] bg-white px-5 py-3 text-[13px] font-medium text-[#334155] transition hover:bg-[#f8fafc]"
+>
+<svg
+viewBox="0 0 24 24"
+fill="none"
+stroke="currentColor"
+strokeWidth="1.8"
+className="h-4 w-4"
+>
+<path
+strokeLinecap="round"
+strokeLinejoin="round"
+d="M19 12H5"
+/>
+<path
+strokeLinecap="round"
+strokeLinejoin="round"
+d="m11 18-6-6 6-6"
+/>
+</svg>
 
-{/* CONTINUE */}
+Back
+</button>
 
 <button
 type="button"
 onClick={continueToNextStep}
-className="flex w-full items-center justify-center gap-3 rounded-xl bg-[#10284c] px-6 py-3 text-[14px] font-semibold text-white shadow-sm transition hover:bg-[#0c203d] sm:min-w-[220px]"
+disabled={!isScreen3Complete}
+className={`inline-flex items-center justify-center gap-3 rounded-xl px-6 py-3 text-[14px] font-semibold ${
+isScreen3Complete
+? "bg-[#10284c] text-white hover:bg-[#0d213f] cursor-pointer"
+: "bg-gray-300 text-gray-500 cursor-not-allowed"
+}`}
 >
 Continue to Next Step
 

@@ -1699,11 +1699,13 @@ onChange={(e) => setFloorCount(e.target.value)}
 className="h-10 w-full rounded-[7px] border border-[#d9dee7] bg-white px-3 text-[13px] text-[#334155] outline-none transition focus:border-[#10284c] focus:ring-1 focus:ring-[#10284c]"
 >
 <option value="">Select Number of Floors</option>
-<option value="ground">Ground Floor</option>
-<option value="first">G+1 Floor</option>
-<option value="second">G+2 Floor</option>
-<option value="third">G+3 Floor</option>
-<option value="more-than-four">More than 4 Floors</option>
+<option value="Ground">Ground Floor</option>
+<option value="G+1">G+1 Floor</option>
+<option value="G+2">G+2 Floor</option>
+<option value="G+3">G+3 Floor</option>
+<option value="G+4">G+4 Floors</option>
+<option value="G+5">G+5 Floors</option>
+<option value="G+6">G+6 Floors</option>
 </select>
 </div>
 </div>
