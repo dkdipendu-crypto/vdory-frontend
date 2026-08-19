@@ -1303,7 +1303,11 @@ Back
 type="button"
 onClick={continueToNextStep}
 disabled={!isScreen2Complete}
-className="inline-flex items-center justify-center gap-3 rounded-xl bg-[#10284c] px-6 py-3 text-[14px] font-semibold text-white shadow-sm transition hover:bg-[#0c203d] sm:min-w-[220px]"
+className={
+isScreen2Complete
+? "inline-flex items-center justify-center gap-3 rounded-xl bg-[#10284c] px-6 py-3 text-[14px] font-semibold text-white hover:bg-[#0b1d38]"
+: "inline-flex items-center justify-center gap-3 rounded-xl bg-gray-300 px-6 py-3 text-[14px] font-semibold text-gray-500 cursor-not-allowed"
+}
 >
 Continue to Next Step
 
@@ -1317,7 +1321,7 @@ className="h-5 w-5"
 <path
 strokeLinecap="round"
 strokeLinejoin="round"
-d="M5 12h13"
+d="M5 12h14"
 />
 <path
 strokeLinecap="round"
