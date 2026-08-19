@@ -33,18 +33,11 @@ const materialOptions = [
 type SmartHomeOption = "yes" | "partial" | "no";
 
 export default function Screen4() {
-const [materialQuality, setMaterialQuality] =
-useState<MaterialQuality>("Standard");
+const [materialQuality, setMaterialQuality] = useState<MaterialQuality | "">("");
 
-const [selectedMaterials, setSelectedMaterials] = useState<string[]>([
-"Marble / Granite",
-"Wood",
-"Tiles",
-"Stone",
-]);
+const [selectedMaterials, setSelectedMaterials] = useState<string[]>([]);
 
-const [smartHome, setSmartHome] =
-useState<SmartHomeOption>("yes");
+const [smartHome, setSmartHome] = useState<SmartHomeOption | "">("");
 
 const [showProfile, setShowProfile] = useState(false);
 const [showAccountSettings, setShowAccountSettings] = useState(false);
@@ -106,6 +99,11 @@ saveScreen4();
 // Screen 5 / Layout Preview
 window.location.href = "/Screen5";
 };
+
+const isScreen4Complete =
+materialQuality !== "" ||
+selectedMaterials.length > 0 ||
+smartHome !== "";
 
 return (
 <main className="min-h-screen bg-[#f8fafc] text-[#10284c]">
@@ -791,7 +789,12 @@ Back
 <button
 type="button"
 onClick={continueToNextStep}
-className="ml-auto inline-flex w-full items-center justify-center gap-3 rounded-xl bg-[#10284c] px-6 py-3 text-[14px] font-semibold text-white shadow-sm transition hover:bg-[#0c203d] sm:min-w-[220px] sm:w-auto"
+disabled={!isScreen4Complete}
+className={`ml-auto inline-flex w-full items-center justify-center gap-3 rounded-xl px-6 py-3 text-[14px] font-semibold shadow-sm transition lg:min-w-[220px] ${
+isScreen4Complete
+? "bg-[#10284c] text-white hover:bg-[#0c203d]"
+: "bg-[#d9dee7] text-[#8a94a6] cursor-not-allowed"
+}`}
 >
 Continue to Next Step
 
