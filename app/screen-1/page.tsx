@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation";
 
 import { useState } from "react";
 
@@ -51,6 +52,7 @@ cityStateData[city] = state;
 });
 
 export default function Screen1() {
+const router = useRouter();
 const [state, setState] = useState("");
 const [city, setCity] = useState("");
 const [test, setTest] = useState(false);
@@ -145,7 +147,12 @@ localStorage.setItem(
 JSON.stringify(screen1Data)
 );
 };
+const continueToNextStep = () => {
+if (!isScreen1Complete()) return;
 
+saveScreen1();
+router.push("/screen-2");
+};
 return (
 <main className="min-h-screen bg-[#f8fafc] text-[#10284c]">
 {showProfile && (
@@ -1915,9 +1922,7 @@ onClick={() => {
 if (!isScreen1Complete()) return;
 
 saveScreen1();
-
-// Screen 2 will be connected here
-// once Screen 2 is implemented.
+router.push("/screen-2");
 }}
 className={`w-full lg:w-auto ml-auto inline-flex items-center justify-center gap-3 rounded-xl px-6 py-3 text-[14px] font-semibold shadow-sm transition lg:min-w-[220px] ${
 isScreen1Complete()
