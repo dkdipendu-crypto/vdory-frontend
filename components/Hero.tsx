@@ -19,7 +19,7 @@ return (
 <nav className="max-w-7xl mx-auto h-20 px-6 lg:px-8 flex items-center justify-between">
 
 <Image
-src="/images/solving-walls.png"
+src="/images/s-walls.png"
 alt="Vdory"
 width={200}
 height={60}
